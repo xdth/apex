@@ -1,9 +1,9 @@
 # APEX: Advanced Physique Enhancement Program
 
-![APEX Training Program](assets/images/apex-banner.png)
+![APEX Training Program](assets/images/apex-banner.svg)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/Version-2025.01-brightgreen.svg)](https://github.com/yourusername/APEX)
+[![Version](https://img.shields.io/badge/Version-2025.01-brightgreen.svg)](https://github.com/xdth/APEX)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 ## 🔥 Overview

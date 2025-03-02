@@ -3,7 +3,7 @@ remote_theme: just-the-docs/just-the-docs
 # Site settings
 title: APEX Training Program
 description: Advanced Physique Enhancement Program - A scientifically-designed hypertrophy training system
-url: "https://xdth.github.io"
+url: "https://yourusername.github.io"
 baseurl: "/APEX"
 
 # Enable or disable the site search
@@ -26,10 +26,10 @@ color_scheme: light
 # Aux links for the upper right navigation
 aux_links:
   "APEX on GitHub":
-    - "https://github.com/xdth/APEX"
+    - "https://github.com/yourusername/APEX"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2025 dth. Distributed by an <a href=\"https://github.com/xdth/APEX/blob/main/LICENSE\">MIT license.</a>"
+footer_content: "Copyright &copy; 2025 Your Name. Distributed by an <a href=\"https://github.com/yourusername/APEX/blob/main/LICENSE\">MIT license.</a>"
 
 # Back to top link
 back_to_top: true
@@ -38,13 +38,21 @@ back_to_top_text: "Back to top"
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/xdth/APEX"
+gh_edit_repository: "https://github.com/yourusername/APEX"
 gh_edit_branch: "main"
 gh_edit_view_mode: "tree"
 
 # Google Analytics tracking
 ga_tracking: UA-000000000-0
 ga_tracking_anonymize_ip: true
+
+# Custom SCSS
+sass:
+  style: compressed
+
+# Add custom CSS
+extra_css:
+  - /assets/css/custom.scss
 
 # Define Jekyll collections
 collections:
