@@ -12,11 +12,13 @@ Advanced Physique Enhancement Program - A scientific approach to muscle hypertro
 {: .fs-6 .fw-300 }
 
 [Get Started](docs/getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/yourusername/APEX){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View on GitHub](https://github.com/xdth/apex){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-![APEX Training Program](assets/images/apex-banner.svg)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/xdth/apex/main/assets/images/apex-banner.svg" alt="APEX Training Program" width="800">
+</div>
 
 ## Scientific Hypertrophy Training
 

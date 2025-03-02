@@ -1,86 +1,29 @@
-remote_theme: just-the-docs/just-the-docs
-
-# Site settings
 title: APEX Training Program
 description: Advanced Physique Enhancement Program - A scientifically-designed hypertrophy training system
-url: "https://yourusername.github.io"
-baseurl: "/APEX"
+baseurl: "/apex"
+url: "https://xdth.github.io"
+
+# Theme settings
+remote_theme: just-the-docs/just-the-docs@v0.4.2
+color_scheme: light
 
 # Enable or disable the site search
 search_enabled: true
-# Split pages into sections that can be searched individually
-search.heading_level: 3
-# Maximum amount of previews per search result
-search.previews: 3
-# Maximum amount of words to display before a matched word in the preview
-search.preview_words_before: 5
-# Maximum amount of words to display after a matched word in the preview
-search.preview_words_after: 10
 
 # Enable or disable heading anchors
 heading_anchors: true
 
-# Color scheme supports "light" (default) and "dark"
-color_scheme: light
-
 # Aux links for the upper right navigation
 aux_links:
   "APEX on GitHub":
-    - "https://github.com/yourusername/APEX"
-
-# Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2025 Your Name. Distributed by an <a href=\"https://github.com/yourusername/APEX/blob/main/LICENSE\">MIT license.</a>"
+    - "https://github.com/xdth/apex"
 
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
 
-# Footer "Edit this page on GitHub" link text
-gh_edit_link: true
-gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/yourusername/APEX"
-gh_edit_branch: "main"
-gh_edit_view_mode: "tree"
-
-# Google Analytics tracking
-ga_tracking: UA-000000000-0
-ga_tracking_anonymize_ip: true
-
-# Custom SCSS
-sass:
-  style: compressed
-
-# Add custom CSS
-extra_css:
-  - /assets/css/custom.scss
-
-# Define Jekyll collections
-collections:
-  workouts:
-    permalink: "/:collection/:path/"
-    output: true
-  nutrition:
-    permalink: "/:collection/:path/"
-    output: true
-  exercises:
-    permalink: "/:collection/:path/"
-    output: true
-
-# Define which collections display a navigation section
-just_the_docs:
-  collections:
-    workouts:
-      name: Workouts
-      nav_fold: true
-    nutrition:
-      name: Nutrition
-      nav_fold: true
-    exercises:
-      name: Exercise Library
-      nav_fold: true
-
-# Define order of navigation
-nav_sort: case_sensitive
+# Footer content
+footer_content: "Copyright &copy; 2025. Released under the MIT License."
 
 # Exclude from processing
 exclude:
@@ -91,3 +34,16 @@ exclude:
   - CONTRIBUTING.md
   - DIRECTORY-STRUCTURE.md
   - .github/
+  - README.md
+
+# Enable plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Explicitly specify the kramdown markdown processor
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false

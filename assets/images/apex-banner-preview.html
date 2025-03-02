@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .banner {
+      width: 1200px;
+      height: 300px;
+      background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    .title {
+      font-size: 72px;
+      font-weight: bold;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .subtitle {
+      font-size: 28px;
+      margin: 10px 0 20px 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .line {
+      width: 600px;
+      height: 3px;
+      background-color: white;
+      margin-bottom: 20px;
+    }
+    .version {
+      font-size: 20px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 80px solid rgba(255, 255, 255, 0.7);
+    }
+    .triangle-left {
+      left: 140px;
+      top: 110px;
+    }
+    .triangle-right {
+      right: 140px;
+      top: 110px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="triangle triangle-left"></div>
+    <div class="triangle triangle-right"></div>
+    <h1 class="title">APEX</h1>
+    <h2 class="subtitle">Advanced Physique Enhancement Program</h2>
+    <div class="line"></div>
+    <div class="version">Version 2025.01</div>
+  </div>
+</body>
+</html>
