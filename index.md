@@ -1,12 +1,12 @@
 ---
-layout: home
-title: APEX Training Program
+layout: default
+title: Home
 nav_order: 1
+description: "APEX: Advanced Physique Enhancement Program - A scientific approach to muscle hypertrophy"
 permalink: /
 ---
 
 # APEX Training Program
-{: .fs-9 }
 
 Advanced Physique Enhancement Program - A scientific approach to muscle hypertrophy
 {: .fs-6 .fw-300 }

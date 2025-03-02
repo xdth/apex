@@ -4,7 +4,7 @@ baseurl: "/apex"
 url: "https://xdth.github.io"
 
 # Theme settings
-remote_theme: just-the-docs/just-the-docs@v0.4.2
+remote_theme: just-the-docs/just-the-docs@v0.3.3
 color_scheme: light
 
 # Enable or disable the site search
@@ -34,7 +34,7 @@ exclude:
   - CONTRIBUTING.md
   - DIRECTORY-STRUCTURE.md
   - .github/
-  - README.md
+  - LICENSE
 
 # Enable plugins
 plugins:

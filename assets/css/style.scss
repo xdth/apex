@@ -1,37 +1,16 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
-/* Custom styles to fix rendering issues */
-
-/* Fix oversized icons */
-.svg-icon,
-svg.icon,
-img.icon {
-  max-width: 24px !important;
-  max-height: 24px !important;
-  width: auto !important;
-  height: auto !important;
-}
-
-/* Constrain images to their container width */
+/* Add your custom CSS here */
 img, svg {
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Specific fix for header icons */
-header img, 
-header svg {
-  max-height: 36px !important;
-}
-
-/* Better table styling */
 table {
   width: 100%;
-  margin-bottom: 1rem;
   border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 
 th, td {
@@ -48,42 +27,40 @@ tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-/* Improve code block styling */
-pre, code {
-  font-size: 0.9rem;
-  border-radius: 4px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  /* Reduce padding for mobile */
-  .main-content {
-    padding: 1rem !important;
-  }
-}
-
-/* Fix for banner image */
-img[alt="APEX Training Program"] {
-  max-width: 100%;
-  height: auto !important;
-  margin-bottom: 2rem;
-  display: block;
-}
-
-/* Override any problematic theme styling */
 .site-title {
-  font-size: 1.5rem !important;
+  font-size: 24px !important;
 }
 
-.main-content-wrap {
+.main-content img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.main-content {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Fix navigation */
-.site-nav, 
-.site-header, 
-.site-footer {
-  width: 100% !important;
-  max-width: 100% !important;
+@media (max-width: 800px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
 }
