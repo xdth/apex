@@ -371,4 +371,21 @@ This document provides detailed information on all exercises included in the APE
 **Proper Form**:
 1. Sit on floor with knees bent
 2. Lean back slightly, maintaining straight spine
-3. Hold dumbbell with both
+3. Hold dumbbell with both hands at chest level
+4. Elevate feet slightly off ground (optional)
+5. Rotate torso to touch dumbbell to floor on each side
+6. Control the movement through full range of motion
+7. Maintain braced core throughout
+
+**Common Errors**:
+- Rounding the lower back
+- Using arms instead of core to move weight
+- Insufficient rotation range
+- Moving too quickly/using momentum
+- Dropping chest toward knees
+
+**Training Tips**:
+- Focus on rotating from the waist
+- Keep chest elevated throughout
+- Start with lighter weight or no weight
+- For progression, increase elevation of feet

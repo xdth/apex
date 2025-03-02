@@ -1,0 +1,85 @@
+remote_theme: just-the-docs/just-the-docs
+
+# Site settings
+title: APEX Training Program
+description: Advanced Physique Enhancement Program - A scientifically-designed hypertrophy training system
+url: "https://xdth.github.io"
+baseurl: "/APEX"
+
+# Enable or disable the site search
+search_enabled: true
+# Split pages into sections that can be searched individually
+search.heading_level: 3
+# Maximum amount of previews per search result
+search.previews: 3
+# Maximum amount of words to display before a matched word in the preview
+search.preview_words_before: 5
+# Maximum amount of words to display after a matched word in the preview
+search.preview_words_after: 10
+
+# Enable or disable heading anchors
+heading_anchors: true
+
+# Color scheme supports "light" (default) and "dark"
+color_scheme: light
+
+# Aux links for the upper right navigation
+aux_links:
+  "APEX on GitHub":
+    - "https://github.com/xdth/APEX"
+
+# Footer content appears at the bottom of every page's main content
+footer_content: "Copyright &copy; 2025 dth. Distributed by an <a href=\"https://github.com/xdth/APEX/blob/main/LICENSE\">MIT license.</a>"
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/xdth/APEX"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+# Google Analytics tracking
+ga_tracking: UA-000000000-0
+ga_tracking_anonymize_ip: true
+
+# Define Jekyll collections
+collections:
+  workouts:
+    permalink: "/:collection/:path/"
+    output: true
+  nutrition:
+    permalink: "/:collection/:path/"
+    output: true
+  exercises:
+    permalink: "/:collection/:path/"
+    output: true
+
+# Define which collections display a navigation section
+just_the_docs:
+  collections:
+    workouts:
+      name: Workouts
+      nav_fold: true
+    nutrition:
+      name: Nutrition
+      nav_fold: true
+    exercises:
+      name: Exercise Library
+      nav_fold: true
+
+# Define order of navigation
+nav_sort: case_sensitive
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - CONTRIBUTING.md
+  - DIRECTORY-STRUCTURE.md
+  - .github/
