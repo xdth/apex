@@ -1,3 +1,9 @@
+---
+layout: default
+title: Program Overview
+description: "A detailed overview of the APEX (Advanced Physique Enhancement Program)"
+---
+
 # APEX Program Overview
 
 ## Program Philosophy
@@ -55,10 +61,6 @@ The program requires:
 - **EZ bar** (for bicep and tricep movements)
 - **Incline bench with barbell rack** (for press variations)
 
-### Equipment Substitutions
-
-If you don't have the exact equipment listed, the [Equipment Guide](equipment-guide.md) provides appropriate substitutions to maintain the effectiveness of each exercise.
-
 ## Advanced Techniques
 
 APEX implements the following advanced training methods:
@@ -97,13 +99,4 @@ With proper implementation and nutrition, you can expect:
 - Increased work capacity and metabolic conditioning
 - Progressive strength gains in key movement patterns
 
-## Complementary Components
-
-The APEX program is supported by detailed guides on:
-
-- [Nutrition for Hypertrophy](nutrition-guide.md)
-- [Recovery Optimization](recovery-protocols.md)
-- [Progress Tracking](tracking/README.md)
-- [Exercise Technique](exercise-library.md)
-
-Begin your APEX journey by reviewing the [Getting Started](getting-started.md) guide for a step-by-step implementation plan.
+Before beginning this program, consult with a certified strength and conditioning specialist and your healthcare provider.

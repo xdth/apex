@@ -3,28 +3,6 @@ description: Advanced Physique Enhancement Program - A scientifically-designed h
 baseurl: "/apex"
 url: "https://xdth.github.io"
 
-# Theme settings
-remote_theme: just-the-docs/just-the-docs@v0.3.3
-color_scheme: light
-
-# Enable or disable the site search
-search_enabled: true
-
-# Enable or disable heading anchors
-heading_anchors: true
-
-# Aux links for the upper right navigation
-aux_links:
-  "APEX on GitHub":
-    - "https://github.com/xdth/apex"
-
-# Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
-
-# Footer content
-footer_content: "Copyright &copy; 2025. Released under the MIT License."
-
 # Exclude from processing
 exclude:
   - Gemfile
@@ -36,14 +14,8 @@ exclude:
   - .github/
   - LICENSE
 
-# Enable plugins
-plugins:
-  - jekyll-remote-theme
-  - jekyll-seo-tag
+# Footer content
+footer_content: "Copyright &copy; 2025. APEX was created by dth with Claude 3.7."
 
-# Explicitly specify the kramdown markdown processor
+# Build settings
 markdown: kramdown
-kramdown:
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false

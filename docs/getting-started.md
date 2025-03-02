@@ -1,9 +1,7 @@
 ---
 layout: default
 title: Getting Started
-nav_order: 2
 description: "How to get started with the APEX Training Program"
-permalink: /docs/getting-started
 ---
 
 # Getting Started with APEX

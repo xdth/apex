@@ -1,23 +1,20 @@
 ---
 layout: default
 title: Home
-nav_order: 1
 description: "APEX: Advanced Physique Enhancement Program - A scientific approach to muscle hypertrophy"
-permalink: /
 ---
 
 # APEX Training Program
 
 Advanced Physique Enhancement Program - A scientific approach to muscle hypertrophy
-{: .fs-6 .fw-300 }
 
-[Get Started](docs/getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/xdth/apex){: .btn .fs-5 .mb-4 .mb-md-0 }
+<a href="/apex/docs/getting-started" class="btn">Get Started</a>
+<a href="https://github.com/xdth/apex" class="btn">View on GitHub</a>
 
 ---
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/xdth/apex/main/assets/images/apex-banner.svg" alt="APEX Training Program" width="800">
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="https://raw.githubusercontent.com/xdth/apex/main/assets/images/apex-banner.svg" alt="APEX Training Program" style="max-width: 800px; width: 100%;">
 </div>
 
 ## Scientific Hypertrophy Training
@@ -36,14 +33,14 @@ APEX (Advanced Physique Enhancement Program) is a scientifically-designed, hyper
 
 The complete APEX program includes:
 
-- [Exercise Library](docs/exercise-library) with detailed form guides
-- [Nutrition Guide](docs/nutrition-guide) for optimal muscle growth
-- [Recovery Protocols](docs/recovery-protocols) to maximize adaptation
-- [Workout Logs](docs/logs/) for tracking progress
-- [Scientific References](docs/references) backing program design
+- [Exercise Library](/apex/docs/exercise-library) with detailed form guides
+- [Nutrition Guide](/apex/docs/nutrition-guide) for optimal muscle growth
+- [Recovery Protocols](/apex/docs/recovery-protocols) to maximize adaptation
+- [Workout Logs](/apex/docs/logs/) for tracking progress
+- [Scientific References](/apex/docs/references) backing program design
 
 ## Get Started Today
 
 Ready to transform your physique with science-backed training methods?
 
-[Begin Your APEX Journey](docs/getting-started){: .btn .btn-blue }
+<a href="/apex/docs/getting-started" class="btn">Begin Your APEX Journey</a>
