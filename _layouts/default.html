@@ -6,8 +6,8 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   
-  <!-- Link to external stylesheet -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  <!-- Fix CSS path by using absolute URL -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.scss' | relative_url }}">
   
   {% if site.github.environment == "github-pages" %}
   <!-- GitHub Pages doesn't allow custom plugins, so we add analytics here -->

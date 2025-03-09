@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Getting Started
+title: "Getting Started | APEX Program"
 description: "How to get started with the APEX Training Program"
+permalink: /docs/getting-started/
 ---
 
 # Getting Started with APEX
@@ -33,7 +34,7 @@ Before beginning, record:
 
 ### Step 2: Review the Program Structure
 
-Familiarize yourself with the [program structure](/docs/program-overview):
+Familiarize yourself with the [program structure]({{ site.baseurl }}/docs/program-overview/):
 - 6-day PPL split (Push/Pull/Legs)
 - Advanced hypertrophy techniques
 - Recovery protocols
@@ -48,7 +49,7 @@ Decide when you'll train each day:
 ### Step 4: Begin with Week 1
 
 Start with the Week 1 workouts:
-- [Day 1: Push Workout A](/docs/workouts/week1/day1-push-a)
+- [Day 1: Push Workout A]({{ site.baseurl }}/docs/workouts/week1/day1-push-a/)
 - Day 2: Pull Workout A
 - Day 3: Legs Workout A
 - Day 4: Push Workout B
@@ -57,7 +58,7 @@ Start with the Week 1 workouts:
 
 ### Step 5: Track Your Progress
 
-Use the provided [tracking tools](/docs/tracking/templates) to monitor:
+Use the provided [tracking tools]({{ site.baseurl }}/docs/logs/) to monitor:
 - Weight used for each exercise
 - Sets and reps completed
 - Rating of perceived exertion (RPE)
@@ -100,8 +101,8 @@ If you experience these symptoms, consider taking an extra rest day or implement
 ## Next Steps
 
 Once you're ready to begin:
-1. Review the [Exercise Library](/docs/exercise-library) for proper form guidance
-2. Set up your [Nutrition Plan](/docs/nutrition-guide) to support muscle growth
-3. Begin with [Week 1, Day 1: Push Workout A](/docs/workouts/week1/day1-push-a)
+1. Review the [Exercise Library]({{ site.baseurl }}/docs/exercise-library/) for proper form guidance
+2. Set up your [Nutrition Plan]({{ site.baseurl }}/docs/nutrition/) to support muscle growth
+3. Begin with [Week 1, Day 1: Push Workout A]({{ site.baseurl }}/docs/workouts/week1/day1-push-a/)
 
 Remember to consult with qualified fitness and healthcare professionals before beginning this or any exercise program.

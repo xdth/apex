@@ -2,6 +2,9 @@
 
 === ./assets/css/style.scss ===
 
+---
+---
+
 :root {
   --primary-color: #0066cc;
   --secondary-color: #ff6600;
@@ -2553,17 +2556,51 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # Required for newer Ruby versions
 gem "webrick", "~> 1.7"
 
-=== ./includes/footer.html ===
+=== ./_includes/footer.html ===
 
+<footer class="footer">
+  <div class="container">
+    <p>&copy; {{ site.time | date: '%Y' }} APEX - Advanced Physique Enhancement Program. Created by <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>.</p>
+    <p>
+      <a href="{{ site.baseurl }}/">Home</a> |
+      <a href="{{ site.baseurl }}/docs/getting-started/">Getting Started</a> |
+      <a href="{{ site.baseurl }}/docs/workouts/">Workouts</a> |
+      <a href="{{ site.baseurl }}/docs/nutrition/">Nutrition</a> |
+      <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}">GitHub</a>
+    </p>
+  </div>
+</footer>
 
+=== ./_includes/header.html ===
 
-=== ./includes/header.html ===
+<header class="header">
+  <div class="container">
+    <a href="{{ site.baseurl }}/" class="logo">
+      <span>A</span>P<span>E</span>X
+    </a>
+    <nav class="nav">
+      <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ site.baseurl }}/docs/getting-started/" {% if page.url contains '/getting-started/' %}class="active"{% endif %}>Getting Started</a>
+      <a href="{{ site.baseurl }}/docs/workouts/" {% if page.url contains '/workouts/' %}class="active"{% endif %}>Workouts</a>
+      <a href="{{ site.baseurl }}/docs/exercise-library/" {% if page.url contains '/exercise-library/' %}class="active"{% endif %}>Exercises</a>
+      <a href="{{ site.baseurl }}/docs/nutrition/" {% if page.url contains '/nutrition/' %}class="active"{% endif %}>Nutrition</a>
+      <a href="{{ site.baseurl }}/docs/recovery/" {% if page.url contains '/recovery/' %}class="active"{% endif %}>Recovery</a>
+      <a href="{{ site.baseurl }}/docs/logs/" {% if page.url contains '/logs/' %}class="active"{% endif %}>Logs</a>
+    </nav>
+  </div>
+</header>
 
+=== ./_includes/navigation.html ===
 
-
-=== ./includes/navigation.html ===
-
-
+<nav class="nav">
+  <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+  <a href="{{ site.baseurl }}/docs/getting-started/" {% if page.url contains '/getting-started/' %}class="active"{% endif %}>Getting Started</a>
+  <a href="{{ site.baseurl }}/docs/workouts/" {% if page.url contains '/workouts/' %}class="active"{% endif %}>Workouts</a>
+  <a href="{{ site.baseurl }}/docs/exercise-library/" {% if page.url contains '/exercise-library/' %}class="active"{% endif %}>Exercises</a>
+  <a href="{{ site.baseurl }}/docs/nutrition/" {% if page.url contains '/nutrition/' %}class="active"{% endif %}>Nutrition</a>
+  <a href="{{ site.baseurl }}/docs/recovery/" {% if page.url contains '/recovery/' %}class="active"{% endif %}>Recovery</a>
+  <a href="{{ site.baseurl }}/docs/logs/" {% if page.url contains '/logs/' %}class="active"{% endif %}>Logs</a>
+</nav>
 
 === ./index.md ===
 
@@ -2658,22 +2695,7 @@ The program incorporates advanced hypertrophy techniques including mechanical dr
   {% endif %}
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="{{ site.baseurl }}/" class="logo">
-        <span>A</span>P<span>E</span>X
-      </a>
-      <nav class="nav">
-        <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
-        <a href="{{ site.baseurl }}/docs/getting-started/" {% if page.url contains '/getting-started/' %}class="active"{% endif %}>Getting Started</a>
-        <a href="{{ site.baseurl }}/docs/workouts/" {% if page.url contains '/workouts/' %}class="active"{% endif %}>Workouts</a>
-        <a href="{{ site.baseurl }}/docs/exercise-library/" {% if page.url contains '/exercise-library/' %}class="active"{% endif %}>Exercises</a>
-        <a href="{{ site.baseurl }}/docs/nutrition/" {% if page.url contains '/nutrition/' %}class="active"{% endif %}>Nutrition</a>
-        <a href="{{ site.baseurl }}/docs/recovery/" {% if page.url contains '/recovery/' %}class="active"{% endif %}>Recovery</a>
-        <a href="{{ site.baseurl }}/docs/logs/" {% if page.url contains '/logs/' %}class="active"{% endif %}>Logs</a>
-      </nav>
-    </div>
-  </header>
+  {% include header.html %}
 
   <div class="container">
     {% if page.url != '/' %}
@@ -2728,18 +2750,7 @@ The program incorporates advanced hypertrophy techniques including mechanical dr
     {% endif %}
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; {{ site.time | date: '%Y' }} APEX - Advanced Physique Enhancement Program. Created by <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>.</p>
-      <p>
-        <a href="{{ site.baseurl }}/">Home</a> |
-        <a href="{{ site.baseurl }}/docs/getting-started/">Getting Started</a> |
-        <a href="{{ site.baseurl }}/docs/workouts/">Workouts</a> |
-        <a href="{{ site.baseurl }}/docs/nutrition/">Nutrition</a> |
-        <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}">GitHub</a>
-      </p>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>
 
