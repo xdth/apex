@@ -1,0 +1,59 @@
+/apex
+├── _config.yml                    # Jekyll configuration
+├── _layouts/
+│   └── default.html               # Your custom layout
+├── _includes/                     # Create this directory for reusable components
+│   ├── header.html                # Site header
+│   ├── footer.html                # Site footer
+│   ├── navigation.html            # Navigation menu
+│   └── exercise-card.html         # Reusable exercise card component
+├── assets/
+│   ├── css/
+│   │   └── styles.css             # Move inline styles here
+│   ├── js/
+│   │   └── main.js                # For any JavaScript functionality
+│   └── images/
+│       └── logo.png               # Site logo and other images
+├── index.md                       # Home page
+└── docs/
+    ├── getting-started.md         # Introduction to the program
+    ├── program-overview.md        # Program philosophy and structure
+    ├── exercise-library.md        # Comprehensive exercise guide (renamed)
+    ├── equipment/
+    │   └── index.md               # Equipment guide and substitutions
+    ├── workouts/
+    │   ├── index.md               # Workouts overview
+    │   ├── week1/
+    │   │   ├── index.md           # Week 1 overview
+    │   │   ├── day1-push-a.md     # Push workout A (fixed naming)
+    │   │   ├── day2-pull-a.md     # Pull workout A
+    │   │   ├── day3-legs-a.md     # Legs workout A
+    │   │   ├── day4-push-b.md     # Push workout B
+    │   │   ├── day5-pull-b.md     # Pull workout B
+    │   │   └── day6-legs-b.md     # Legs workout B
+    │   └── week2/                 # For future program variations
+    ├── techniques/
+    │   ├── index.md               # Overview of specialized techniques
+    │   ├── rest-pause.md          # Rest-pause technique details
+    │   ├── mechanical-drop-sets.md # Mechanical drop sets details
+    │   └── tempo-training.md      # Tempo manipulation details
+    ├── nutrition/
+    │   ├── index.md               # Nutrition overview
+    │   ├── caloric-needs.md       # Calculating caloric requirements
+    │   ├── macros.md              # Macronutrient distribution
+    │   ├── meal-timing.md         # Meal timing strategies
+    │   └── supplements.md         # Supplement recommendations
+    ├── recovery/
+    │   ├── index.md               # Recovery overview
+    │   ├── sleep.md               # Sleep optimization
+    │   ├── active-recovery.md     # Active recovery methods
+    │   └── injury-prevention.md   # Injury prevention strategies
+    ├── logs/
+    │   ├── index.md               # Tracking overview
+    │   ├── workout-log.md         # Printable workout log
+    │   ├── nutrition-log.md       # Nutrition tracking template
+    │   └── progress-tracker.md    # Body measurements tracker
+    └── references/
+        ├── index.md               # References overview
+        ├── scientific-studies.md  # Scientific studies supporting the program
+        └── further-reading.md     # Books and resources
