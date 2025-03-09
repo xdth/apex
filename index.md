@@ -1,46 +1,65 @@
 ---
 layout: default
-title: Home
-description: "APEX: Advanced Physique Enhancement Program - A scientific approach to muscle hypertrophy"
+title: "APEX - Advanced Physique Enhancement Program"
+description: "A science-based hypertrophy-optimized 6-day Push/Pull/Legs program designed to maximize muscle growth"
 ---
 
-# APEX Training Program
+# APEX: Advanced Physique Enhancement Program
 
-Advanced Physique Enhancement Program - A scientific approach to muscle hypertrophy
+Welcome to APEX, a comprehensive hypertrophy-focused training system designed to maximize muscle growth through evidence-based training techniques and principles.
 
-<a href="/apex/docs/getting-started" class="btn">Get Started</a>
-<a href="https://github.com/xdth/apex" class="btn">View on GitHub</a>
+## Program Highlights
 
----
+- **6-Day Push/Pull/Legs Split**: Optimized training frequency with each muscle group trained twice weekly
+- **Advanced Hypertrophy Techniques**: Mechanical drop sets, rest-pause training, and tempo manipulation
+- **Scientifically-Backed Principles**: Based on the latest research in resistance training and muscle hypertrophy
+- **Complete System**: Includes training, nutrition, recovery, and progress tracking components
 
-<div style="text-align: center; margin: 2rem 0;">
-  <img src="https://raw.githubusercontent.com/xdth/apex/main/assets/images/apex-banner.svg" alt="APEX Training Program" style="max-width: 800px; width: 100%;">
+## Getting Started
+
+This program is designed for intermediate to advanced lifters looking to maximize hypertrophy (muscle growth). To begin:
+
+1. [**Read the Program Overview**](/apex/docs/program-overview/) to understand the principles and methodology
+2. [**Check Required Equipment**](/apex/docs/equipment/) to ensure you have access to the necessary tools
+3. [**Review the Workout Structure**](/apex/docs/workouts/) to understand the training split
+4. [**Start with Week 1**](/apex/docs/workouts/week1/) and follow the program as prescribed
+
+## Program Components
+
+<div class="grid">
+  <div class="card">
+    <h3>Training Program</h3>
+    <p>A 6-day Push/Pull/Legs routine performed twice weekly to optimize training frequency and volume.</p>
+    <a href="/apex/docs/workouts/" class="btn">View Workouts</a>
+  </div>
+  
+  <div class="card">
+    <h3>Exercise Library</h3>
+    <p>Comprehensive guide to all exercises with proper form, technique, and hypertrophy-specific execution tips.</p>
+    <a href="/apex/docs/exercise-library/" class="btn">Exercise Library</a>
+  </div>
+  
+  <div class="card">
+    <h3>Nutrition Guidelines</h3>
+    <p>Evidence-based nutrition strategies optimized for muscle growth and recovery.</p>
+    <a href="/apex/docs/nutrition/" class="btn">Nutrition Guide</a>
+  </div>
+  
+  <div class="card">
+    <h3>Recovery Protocols</h3>
+    <p>Effective recovery techniques to maximize results and prevent overtraining.</p>
+    <a href="/apex/docs/recovery/" class="btn">Recovery Guide</a>
+  </div>
 </div>
 
-## Scientific Hypertrophy Training
+## Program Philosophy
 
-APEX (Advanced Physique Enhancement Program) is a scientifically-designed, hypertrophy-focused training program implementing cutting-edge techniques for maximum muscle growth. This program utilizes a 6-day Push/Pull/Legs split with carefully calibrated volume, intensity, and advanced training methodologies.
+APEX is built on three core pillars:
 
-### Program Highlights
+1. **Scientific Foundation**: All program elements are based on peer-reviewed research and evidence-based practices
+2. **Progressive Overload**: Systematic increases in training stimulus to drive continuous adaptation
+3. **Recovery Optimization**: Strategic recovery protocols to maximize supercompensation and prevent burnout
 
-- **Training Split**: Push/Pull/Legs performed twice weekly
-- **Frequency**: Each muscle group trained 2x per week with varied stimuli
-- **Rest Days**: 1 day (flexible placement)
-- **Focus**: Maximum hypertrophy with advanced techniques
-- **Available Equipment**: Olympic barbell, shorter barbell, adjustable dumbbells, EZ bar, incline bench
+The program incorporates advanced hypertrophy techniques including mechanical drop sets, rest-pause training, tempo manipulation, and pre-exhaustion methods to maximize muscle fiber recruitment and metabolic stress.
 
-## What's Included
-
-The complete APEX program includes:
-
-- [Exercise Library](/apex/docs/exercise-library) with detailed form guides
-- [Nutrition Guide](/apex/docs/nutrition-guide) for optimal muscle growth
-- [Recovery Protocols](/apex/docs/recovery-protocols) to maximize adaptation
-- [Workout Logs](/apex/docs/logs/) for tracking progress
-- [Scientific References](/apex/docs/references) backing program design
-
-## Get Started Today
-
-Ready to transform your physique with science-backed training methods?
-
-<a href="/apex/docs/getting-started" class="btn">Begin Your APEX Journey</a>
+[Begin Your APEX Journey →](/apex/docs/getting-started/){: .btn .btn-secondary}
