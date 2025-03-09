@@ -1,0 +1,2866 @@
+
+
+=== ./assets/css/style.scss ===
+
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #ff6600;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: #f9f9f9;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: var(--dark-color);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-top: 1.75rem;
+  color: var(--dark-color);
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--dark-color);
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul, ol {
+  margin: 1rem 0 1rem 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+blockquote {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+}
+
+pre {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f1f1f1;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: var(--secondary-color);
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  color: white;
+  padding: 0.75rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.nav a.active {
+  background-color: var(--primary-color);
+}
+
+.footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer a {
+  color: #ddd;
+}
+
+.breadcrumbs {
+  background-color: var(--light-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+  color: var(--primary-color);
+}
+
+.breadcrumbs .separator {
+  margin: 0 0.5rem;
+  color: #999;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.card {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #e55a00;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.sidebar {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.sidebar a {
+  display: block;
+}
+
+.sidebar a:hover {
+  padding-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar a.active {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nav {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav a {
+    margin: 0 0.5rem 0.5rem 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .content-with-sidebar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+=== ./_config.yml ===
+
+# _config.yml
+
+# Site settings
+title: APEX - Advanced Physique Enhancement Program
+email: contact@example.com
+description: >- 
+  APEX is a science-based hypertrophy-optimized 6-day Push/Pull/Legs program 
+  designed to maximize muscle growth through advanced techniques.
+baseurl: "/apex" # the subpath of your site, e.g. /blog
+url: "https://xdth.github.io" # the base hostname & protocol for your site
+github_username: xdth
+repository: xdth/apex
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Styling
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  workouts:
+    output: true
+    permalink: /:collection/:path/
+  nutrition:
+    output: true
+    permalink: /:collection/:path/
+  recovery:
+    output: true
+    permalink: /:collection/:path/
+  techniques:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "docs"
+    values:
+      layout: "default"
+  - scope:
+      path: "docs/workouts"
+    values:
+      layout: "default"
+      category: "Workouts"
+  - scope:
+      path: "docs/nutrition"
+    values:
+      layout: "default"
+      category: "Nutrition"
+  - scope:
+      path: "docs/recovery"
+    values:
+      layout: "default"
+      category: "Recovery"
+  - scope:
+      path: "docs/logs"
+    values:
+      layout: "default"
+      category: "Tracking"
+
+# Exclude these files from production site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .git
+  - .github
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+
+=== ./CONTRIBUTING.md ===
+
+# Contributing to APEX
+
+Thank you for your interest in contributing to the APEX (Advanced Physique Enhancement Program)! Your input is valuable in making this program better for everyone.
+
+## How You Can Contribute
+
+### Exercise Alternatives
+
+If you have suggestions for alternative exercises that target the same muscle groups with similar movement patterns:
+
+1. Create a pull request with the suggested alternative
+2. Include the target muscle group, required equipment, and movement pattern
+3. Provide a brief explanation of why this is a good alternative
+4. If possible, link to a reputable source demonstrating proper form
+
+### Documentation Improvements
+
+Help improve the clarity and usefulness of our documentation:
+
+1. For minor changes (typos, clarifications), submit a pull request directly
+2. For major changes, open an issue first to discuss the proposed changes
+3. Ensure all documentation follows our Markdown style guide
+
+### Success Stories and Feedback
+
+We love hearing about your experience with the program:
+
+1. Submit your feedback via the Issues section with the "Feedback" label
+2. Include specific details about your implementation of the program
+3. If comfortable, share before/after metrics (strength gains, body composition changes)
+
+### Bug Reports
+
+If you notice issues with workout routines, nutrition guidance, or any part of the program:
+
+1. Check if the issue has already been reported
+2. Include detailed information about the problem
+3. Suggest a fix if you have one
+
+## Pull Request Process
+
+1. Fork the repository
+2. Create a new branch for your feature or fix
+3. Make your changes
+4. Submit a pull request with a clear description of the changes
+5. Ensure your PR addresses a specific issue or enhancement
+
+## Coding and Documentation Standards
+
+- Use markdown for all documentation
+- Follow the established file structure and naming conventions
+- Use clear, descriptive commit messages
+- Document any code snippets (e.g., for calculators or tracking tools)
+
+## Style Guide
+
+We use a consistent style across all documentation:
+
+- H1 (#) for main titles
+- H2 (##) for major sections
+- H3 (###) for subsections
+- Use bold (**text**) for emphasis
+- Use emoji sparingly to highlight key points
+- Include tables for structured data
+- Use numbered lists for sequential steps
+- Use bullet points for non-sequential items
+
+## Code of Conduct
+
+Please note that this project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+
+## Questions?
+
+If you have any questions about contributing, please open an issue with the "question" label.
+
+Thank you for improving APEX!
+
+=== ./docs/equipment/index.md ===
+
+
+
+=== ./docs/exercise-library.md ===
+
+---
+layout: default
+title: "Exercise Library | APEX Program"
+description: "Comprehensive guide to all exercises included in the APEX hypertrophy program"
+permalink: /docs/exercise-library/
+nav_order: 3
+---
+
+# Exercise Library
+
+This comprehensive exercise library contains detailed information on all movements included in the APEX hypertrophy program. Each exercise includes proper form instructions, common errors to avoid, and training tips for maximizing hypertrophy benefits.
+
+## Navigation
+
+- [Chest Exercises](#chest-exercises)
+- [Back Exercises](#back-exercises)
+- [Shoulder Exercises](#shoulder-exercises)
+- [Triceps Exercises](#triceps-exercises)
+- [Biceps Exercises](#biceps-exercises)
+- [Leg Exercises](#leg-exercises)
+- [Core Exercises](#core-exercises)
+
+## Chest Exercises
+
+### Bench Press
+
+**Equipment**: Barbell
+
+**Category**: Compound, Push
+
+**Primary Muscles**: Chest
+**Secondary Muscles**: Shoulders, Triceps
+
+**Execution**:
+1. Lie flat on a bench with feet firmly on the ground
+2. Grip the barbell slightly wider than shoulder width
+3. Unrack the bar and lower it with control to mid-chest
+4. Press the bar back up to full arm extension
+5. Repeat for the prescribed number of repetitions
+
+**Form Cues**:
+- Maintain a natural arch in the lower back
+- Keep shoulder blades retracted and depressed
+- Lower the bar with control (2-second eccentric)
+- Bar path should form a slight diagonal line from shoulders to mid-chest
+- Drive through the feet to create a stable base
+
+**Common Errors**:
+- Bouncing the bar off the chest
+- Excessive arch in the lower back
+- Flaring the elbows too wide
+- Inconsistent bar path
+- Lifting hips off the bench
+
+**Hypertrophy Tips**:
+- For maximum chest activation, focus on squeezing the pecs at the top
+- Vary grip width occasionally to target different parts of the chest
+- Pause briefly at the bottom to eliminate momentum and increase tension
+- Consider 1.5 reps (full rep + half rep) to increase time under tension
+- Perform occasional sets with higher reps (12-15) for metabolic stress
+
+### Dumbbell Flyes
+
+**Equipment**: Dumbbells
+
+**Category**: Isolation, Push
+
+**Primary Muscles**: Chest
+**Secondary Muscles**: Shoulders
+
+**Execution**:
+1. Lie on a flat bench holding dumbbells above chest, palms facing each other
+2. Maintain a slight bend in the elbows
+3. Lower dumbbells in an arc motion until you feel a stretch in the chest
+4. Return to starting position by squeezing chest muscles
+5. Repeat for the prescribed number of repetitions
+
+**Form Cues**:
+- Maintain a slight bend in the elbows throughout the movement
+- Focus on the stretch at the bottom position
+- Visualize hugging a barrel during the concentric phase
+- Keep shoulder blades retracted and stable
+- Control the weights throughout the entire range of motion
+
+**Common Errors**:
+- Straightening the arms completely (puts stress on elbow joints)
+- Using momentum to swing the weights
+- Allowing shoulders to roll forward
+- Insufficient range of motion
+- Turning the movement into a press
+
+**Hypertrophy Tips**:
+- Focus on the stretched position at the bottom for 1-2 seconds
+- Squeeze chest muscles forcefully at the top
+- Use a controlled tempo (3:1:2 works well)
+- Can be used as a pre-exhaust before pressing movements
+- Lighter weight with proper form is more effective than heavy weight with poor form
+
+[Continue with all other exercises...]
+
+## Back Exercises
+
+### Deadlifts
+
+**Equipment**: Barbell
+
+**Category**: Compound, Pull
+
+**Primary Muscles**: Lower Back
+**Secondary Muscles**: Calves, Forearms, Glutes, Hamstrings, Middle Back, Quads, Traps
+
+**Execution**:
+1. Stand with feet hip-width apart, barbell over mid-foot
+2. Bend at the hips and knees to grip the bar just outside the legs
+3. Lower hips, lift chest, and flatten back
+4. Drive through the heels, keeping the bar close to the body
+5. Stand tall, push hips forward at the top
+6. Return the weight to the floor with control
+
+**Form Cues**:
+- Maintain a neutral spine throughout the movement
+- Drive through the heels and push the floor away
+- Keep the bar close to the body throughout the lift
+- Engage the lats to keep the bar path vertical
+- Fully lock out at the top by squeezing glutes
+
+**Common Errors**:
+- Rounding the lower back
+- Starting with hips too high
+- Letting the bar drift away from the body
+- Looking up excessively
+- Jerking the weight off the floor
+
+**Hypertrophy Tips**:
+- Control the eccentric (lowering) phase for additional muscle stimulus
+- Focus on feeling the target muscles rather than just moving weight
+- Consider using straps for higher rep sets to prevent grip failure
+- Vary stance width occasionally to emphasize different muscles
+- For back development, ensure proper lat engagement throughout
+
+[Continue with all other exercises...]
+
+## Shoulder Exercises
+[...]
+
+## Triceps Exercises
+[...]
+
+## Biceps Exercises
+[...]
+
+## Leg Exercises
+[...]
+
+## Core Exercises
+[...]
+
+=== ./docs/getting-started.md ===
+
+---
+layout: default
+title: Getting Started
+description: "How to get started with the APEX Training Program"
+---
+
+# Getting Started with APEX
+
+Welcome to the APEX (Advanced Physique Enhancement Program)! This guide will help you implement this science-based hypertrophy program effectively.
+
+## Prerequisites
+
+Before beginning the APEX program, ensure you have:
+
+1. **Consulted a healthcare professional** to ensure you're ready for an intensive training program
+2. **Access to the required equipment**:
+   - Olympic barbell
+   - Shorter barbell
+   - Adjustable dumbbells
+   - EZ bar
+   - Incline bench with barbell rack
+3. **Basic understanding of proper exercise form**
+4. **At least 6-12 months of consistent training experience**
+
+## Implementation Steps
+
+### Step 1: Assess Your Starting Point
+
+Before beginning, record:
+- Current body measurements
+- Starting strength levels on key lifts
+- Progress photos (optional)
+
+### Step 2: Review the Program Structure
+
+Familiarize yourself with the [program structure](/docs/program-overview):
+- 6-day PPL split (Push/Pull/Legs)
+- Advanced hypertrophy techniques
+- Recovery protocols
+
+### Step 3: Set Up Your Training Schedule
+
+Decide when you'll train each day:
+- Schedule 6 training sessions per week
+- Place your rest day strategically (typically after day 3 or day 6)
+- Allocate 45-75 minutes per session
+
+### Step 4: Begin with Week 1
+
+Start with the Week 1 workouts:
+- [Day 1: Push Workout A](/docs/workouts/week1/day1-push-a)
+- Day 2: Pull Workout A
+- Day 3: Legs Workout A
+- Day 4: Push Workout B
+- Day 5: Pull Workout B
+- Day 6: Legs Workout B
+
+### Step 5: Track Your Progress
+
+Use the provided [tracking tools](/docs/tracking/templates) to monitor:
+- Weight used for each exercise
+- Sets and reps completed
+- Rating of perceived exertion (RPE)
+- Recovery quality
+
+## Implementation Timeline
+
+For best results, follow this progressive implementation:
+
+**Weeks 1-2:**
+- Focus on mastering proper exercise technique
+- Begin at 70-80% of your usual working weights
+- Learn the movement patterns and exercise order
+
+**Weeks 3-4:**
+- Increase weights to your normal working range
+- Begin implementing basic intensification techniques
+- Start following the prescribed rest periods closely
+
+**Weeks 5-6:**
+- Implement all advanced techniques as prescribed
+- Push intensity while maintaining proper form
+- Follow the nutrition guidelines closely
+
+**Weeks 7-8:**
+- Full implementation of all program components
+- Focus on progressive overload
+- Use autoregulation to manage fatigue
+
+## Warning Signs
+
+Be alert to these warning signs of overtraining:
+- Persistent joint pain (different from muscle soreness)
+- Decreased performance across multiple sessions
+- Disrupted sleep patterns
+- Unusual fatigue or decreased motivation
+
+If you experience these symptoms, consider taking an extra rest day or implementing a deload week.
+
+## Next Steps
+
+Once you're ready to begin:
+1. Review the [Exercise Library](/docs/exercise-library) for proper form guidance
+2. Set up your [Nutrition Plan](/docs/nutrition-guide) to support muscle growth
+3. Begin with [Week 1, Day 1: Push Workout A](/docs/workouts/week1/day1-push-a)
+
+Remember to consult with qualified fitness and healthcare professionals before beginning this or any exercise program.
+
+=== ./docs/index.md ===
+
+---
+layout: default
+title: "Documentation | APEX Program"
+description: "Complete documentation for the APEX hypertrophy program"
+permalink: /docs/
+---
+
+# APEX Program Documentation
+
+Welcome to the APEX Program documentation. Here you'll find everything you need to successfully implement this hypertrophy-optimized training system. Use the links below to navigate to specific sections.
+
+## Core Documentation
+
+<div class="grid">
+  <div class="card">
+    <h3>Getting Started</h3>
+    <p>Introduction to the program, prerequisites, and implementation guide.</p>
+    <a href="{{ site.baseurl }}/docs/getting-started/" class="btn">Read Guide</a>
+  </div>
+  
+  <div class="card">
+    <h3>Program Overview</h3>
+    <p>The science, philosophy, and methodology behind the APEX training system.</p>
+    <a href="{{ site.baseurl }}/docs/program-overview/" class="btn">Program Overview</a>
+  </div>
+  
+  <div class="card">
+    <h3>Exercise Library</h3>
+    <p>Complete guide to all exercises with form guides and technique tips.</p>
+    <a href="{{ site.baseurl }}/docs/exercise-library/" class="btn">Exercise Library</a>
+  </div>
+  
+  <div class="card">
+    <h3>Equipment Guide</h3>
+    <p>Required equipment and potential substitutions for home or limited gym setups.</p>
+    <a href="{{ site.baseurl }}/docs/equipment/" class="btn">Equipment Guide</a>
+  </div>
+</div>
+
+## Training Program
+
+<div class="grid">
+  <div class="card">
+    <h3>Workout Structure</h3>
+    <p>Overview of the Push/Pull/Legs split and weekly training structure.</p>
+    <a href="{{ site.baseurl }}/docs/workouts/" class="btn">Workout Structure</a>
+  </div>
+  
+  <div class="card">
+    <h3>Week 1 Training</h3>
+    <p>Detailed workout guides for the first week of the program.</p>
+    <a href="{{ site.baseurl }}/docs/workouts/week1/" class="btn">Week 1 Workouts</a>
+  </div>
+  
+  <div class="card">
+    <h3>Advanced Techniques</h3>
+    <p>Implementation guides for specialized hypertrophy techniques.</p>
+    <a href="{{ site.baseurl }}/docs/techniques/" class="btn">Advanced Techniques</a>
+  </div>
+  
+  <div class="card">
+    <h3>Progression Model</h3>
+    <p>Guidelines for progressive overload and long-term advancement.</p>
+    <a href="{{ site.baseurl }}/docs/progression/" class="btn">Progression Guide</a>
+  </div>
+</div>
+
+## Supporting Components
+
+<div class="grid">
+  <div class="card">
+    <h3>Nutrition Guidelines</h3>
+    <p>Hypertrophy-optimized nutrition protocols and meal planning.</p>
+    <a href="{{ site.baseurl }}/docs/nutrition/" class="btn">Nutrition Guide</a>
+  </div>
+  
+  <div class="card">
+    <h3>Recovery Protocols</h3>
+    <p>Evidence-based recovery strategies for maximum results.</p>
+    <a href="{{ site.baseurl }}/docs/recovery/" class="btn">Recovery Guide</a>
+  </div>
+  
+  <div class="card">
+    <h3>Progress Tracking</h3>
+    <p>Measurement protocols and printable tracking templates.</p>
+    <a href="{{ site.baseurl }}/docs/logs/" class="btn">Tracking Templates</a>
+  </div>
+  
+  <div class="card">
+    <h3>Scientific References</h3>
+    <p>Research and studies supporting the program methodology.</p>
+    <a href="{{ site.baseurl }}/docs/references/" class="btn">References</a>
+  </div>
+</div>
+
+=== ./docs/logs/index.md ===
+
+---
+layout: default
+title: "Workout Logs & Tracking Templates | APEX Program"
+description: "Printable workout logs and progress tracking templates for the APEX hypertrophy program"
+permalink: /docs/logs/
+nav_order: 7
+---
+
+# Workout Logs & Tracking Templates
+
+Consistent tracking is essential for monitoring progress and ensuring continued results. These printable templates will help you track workouts, nutrition, body measurements, and overall progress in the APEX program.
+
+## Table of Contents
+
+- [Workout Tracking Templates](#workout-tracking-templates)
+- [Body Measurement Tracking](#body-measurement-tracking)
+- [Nutrition Logs](#nutrition-logs)
+- [Progress Photo Guidelines](#progress-photo-guidelines)
+- [Performance Metrics](#performance-metrics)
+- [Program Adherence Tracker](#program-adherence-tracker)
+
+## Workout Tracking Templates
+
+### Daily Workout Log
+
+Print this template for each workout to track exercises, sets, reps, weights, and notes.
+
+```
+APEX PROGRAM - WORKOUT LOG
+
+Date: ___/___/______     Day: □ 1 □ 2 □ 3 □ 4 □ 5 □ 6     Type: □ Push □ Pull □ Legs
+Bodyweight: _______     Sleep Quality (1-10): _____     Energy Level (1-10): _____
+Pre-workout Nutrition: ___________________________________________________
+
+| Exercise | Sets | Target Reps | Weight | Actual Reps | RPE | Notes |
+|----------|------|-------------|--------|-------------|-----|-------|
+| 1. | | | | | | |
+| 2. | | | | | | |
+| 3. | | | | | | |
+| 4. | | | | | | |
+| 5. | | | | | | |
+| 6. | | | | | | |
+| 7. | | | | | | |
+| 8. | | | | | | |
+
+Advanced Techniques Used:
+□ Double Rest-Pause   □ Mechanical Drop Set   □ Tempo Manipulation
+□ Partial Reps   □ Pre-Exhaustion   □ Other: _________________________
+
+Workout Duration: _______ minutes
+Post-workout Nutrition: ___________________________________________________
+
+Overall Session Rating (1-10): _____
+Muscle Group Fatigue Ratings (1-10):
+□ Chest: _____ □ Back: _____ □ Shoulders: _____ □ Triceps: _____ □ Biceps: _____ □ Legs: _____
+
+Notes/Observations:
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+Recovery Strategy Implemented:
+__________________________________________________________________
+```
+
+### Weekly Training Overview
+
+Use this template to plan and track your entire training week.
+
+```
+APEX PROGRAM - WEEKLY TRAINING OVERVIEW
+
+Week #: _____     Date Range: ___/___/______ to ___/___/______
+Weekly Goal: _________________________________________________
+
+| Day | Workout | Completed | Primary Focus | Highlight/PR | Recovery |
+|-----|---------|-----------|---------------|--------------|----------|
+| 1 | Push A | □ | | | |
+| 2 | Pull A | □ | | | |
+| 3 | Legs A | □ | | | |
+| 4 | Push B | □ | | | |
+| 5 | Pull B | □ | | | |
+| 6 | Legs B | □ | | | |
+| 7 | Rest | □ | | | |
+
+Weekly Training Volume:
+□ Sets Completed: _____
+□ Total Reps Performed: _____
+□ Total Weight Lifted: _____ kg/lbs
+
+Weekly Adherence Rate: _____% (workouts completed ÷ workouts planned × 100)
+
+Recovery Metrics:
+□ Average Sleep Hours: _____
+□ Average Sleep Quality (1-10): _____
+□ Average Daily Steps: _____
+□ Recovery Modalities Used: ___________________________________________
+
+Notes on Progress:
+__________________________________________________________________
+__________________________________________________________________
+
+Adjustments for Next Week:
+__________________________________________________________________
+__________________________________________________________________
+```
+
+### Exercise Progress Tracker
+
+Use this template to track progress on specific exercises over time.
+
+```
+APEX PROGRAM - EXERCISE PROGRESS TRACKER
+
+Exercise: _______________________     Equipment: _______________________
+Primary Muscle Target: _______________________
+
+| Date | Sets | Reps | Weight | RPE | Notes/Technique Cues |
+|------|------|------|--------|-----|----------------------|
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| | | | | | |
+
+Graph Your Progress:
+[Visual graph space for plotting weight/reps over time]
+
+Technique Notes:
+__________________________________________________________________
+__________________________________________________________________
+
+Plateau-Breaking Strategies:
+□ Micro-loading   □ Tempo Changes   □ Rest Period Manipulation
+□ Range of Motion Variations   □ Advanced Techniques   □ Mechanical Advantage Changes
+```
+
+## Body Measurement Tracking
+
+Track physical changes with this comprehensive measurement template.
+
+```
+APEX PROGRAM - BODY MEASUREMENT TRACKER
+
+Name: _______________________     Program Start Date: ___/___/______
+
+| Measurement | Initial | Week 4 | Week 8 | Week 12 | Week 16 | Total Change |
+|-------------|---------|--------|--------|---------|---------|--------------|
+| Bodyweight | | | | | | |
+| Body Fat % | | | | | | |
+| Chest | | | | | | |
+| Shoulders | | | | | | |
+| Right Arm (relaxed) | | | | | | |
+| Right Arm (flexed) | | | | | | |
+| Left Arm (relaxed) | | | | | | |
+| Left Arm (flexed) | | | | | | |
+| Waist | | | | | | |
+| Hips | | | | | | |
+| Right Thigh | | | | | | |
+| Left Thigh | | | | | | |
+| Right Calf | | | | | | |
+| Left Calf | | | | | | |
+
+Measurement Guidelines:
+- Take all measurements at the same time of day (morning is preferable)
+- Use the same measuring tape and technique each time
+- For limbs, measure at the largest point when muscle is relaxed
+- For waist, measure at the narrowest point
+- For hips, measure at the widest point
+- For bodyweight, use the same scale under similar conditions
+
+Progress Notes:
+__________________________________________________________________
+__________________________________________________________________
+```
+
+## Nutrition Logs
+
+### Daily Nutrition Tracker
+
+```
+APEX PROGRAM - DAILY NUTRITION TRACKER
+
+Date: ___/___/______     □ Training Day / □ Rest Day
+Target Calories: _______     Actual Calories: _______
+Target Macros: P:_____ g  C:_____ g  F:_____ g
+Actual Macros: P:_____ g  C:_____ g  F:_____ g
+Water Intake: _______ liters     Weight: _______ kg/lbs
+
+| Meal | Time | Food/Drink | Portion | Protein | Carbs | Fats | Calories |
+|------|------|------------|---------|---------|-------|------|----------|
+| Breakfast | | | | | | | |
+| | | | | | | | |
+| | | | | | | | |
+| Snack 1 | | | | | | | |
+| | | | | | | | |
+| Lunch | | | | | | | |
+| | | | | | | | |
+| | | | | | | | |
+| Pre-Workout | | | | | | | |
+| | | | | | | | |
+| Post-Workout | | | | | | | |
+| | | | | | | | |
+| Dinner | | | | | | | |
+| | | | | | | | |
+| | | | | | | | |
+| Evening Snack | | | | | | | |
+| | | | | | | | |
+| Total | | | | | | | |
+
+Hunger Level (1-10): _____     Energy Level (1-10): _____     Cravings (1-10): _____
+
+Supplements Taken:
+__________________________________________________________________
+
+Notes (digestion, energy, mood, performance):
+__________________________________________________________________
+__________________________________________________________________
+```
+
+### Weekly Nutrition Overview
+
+```
+APEX PROGRAM - WEEKLY NUTRITION OVERVIEW
+
+Week #: _____     Date Range: ___/___/______ to ___/___/______
+
+| Day | Training/Rest | Calories | Protein (g) | Carbs (g) | Fats (g) | Water (L) | Adherence (1-10) |
+|-----|---------------|----------|-------------|-----------|----------|-----------|------------------|
+| Mon | | | | | | | |
+| Tue | | | | | | | |
+| Wed | | | | | | | |
+| Thu | | | | | | | |
+| Fri | | | | | | | |
+| Sat | | | | | | | |
+| Sun | | | | | | | |
+| Avg | | | | | | | |
+
+Weekly Averages vs. Targets:
+- Calorie Average: _______ / Target: _______
+- Protein Average: _______ g / Target: _______ g
+- Carb Average: _______ g / Target: _______ g
+- Fat Average: _______ g / Target: _______ g
+- Water Average: _______ L / Target: _______ L
+
+Weekly Adherence Rate: _____% (adherence sum ÷ 70 × 100)
+
+Nutrition Challenges Faced:
+__________________________________________________________________
+
+Successful Strategies:
+__________________________________________________________________
+
+Adjustments for Next Week:
+__________________________________________________________________
+```
+
+## Progress Photo Guidelines
+
+Consistent progress photos are a valuable tool for visual tracking of changes. Use the following guidelines:
+
+### Photo Setup
+
+```
+APEX PROGRAM - PROGRESS PHOTO GUIDELINES
+
+Frequency: Take photos every 4 weeks
+Time: Morning, upon waking (before eating/drinking)
+Clothing: Consistent minimal clothing (shorts for men, sports bra/shorts for women)
+Location: Same spot with neutral background
+Lighting: Consistent natural lighting if possible
+Poses:
+  □ Front relaxed
+  □ Front flexed
+  □ Side relaxed
+  □ Side flexed
+  □ Back relaxed
+  □ Back flexed
+  □ Optional: Specific muscle group focus based on goals
+
+Camera Setup:
+  □ Use a tripod or stable surface
+  □ Same distance from camera each time
+  □ Same height/angle
+  □ Timer function to avoid holding phone
+
+Photo Tracking:
+  □ Create a dedicated album
+  □ Label with date and body weight
+  □ Consider a collage app for direct comparisons
+
+Privacy Note: These photos are for your personal tracking only.
+```
+
+## Performance Metrics
+
+Track objective performance metrics to ensure progress beyond just visual changes.
+
+```
+APEX PROGRAM - PERFORMANCE METRICS TRACKER
+
+| Date | Push Strength | Pull Strength | Leg Strength | Work Capacity | Recovery | Notes |
+|------|---------------|---------------|--------------|---------------|----------|-------|
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+| | | | | | | |
+
+Performance Test Protocols:
+
+Push Strength:
+- Bench Press: 3RM test
+- Record weight × reps × 1.0333 for estimated 1RM
+
+Pull Strength:
+- Bent Over Row: 5RM test
+- Record weight × reps × 1.1307 for estimated 1RM
+
+Leg Strength:
+- Squat: 3RM test
+- Record weight × reps × 1.0333 for estimated 1RM
+
+Work Capacity:
+- 100-rep challenge: Select push, pull, and leg exercise
+- Record time to complete 100 total reps (alternating exercises)
+- Weight used should be approximately 60% of 10RM
+
+Recovery:
+- Heart Rate Recovery test:
+  1. 2-minute high-intensity work (burpees, jump rope, etc.)
+  2. Record heart rate immediately after
+  3. Rest 60 seconds
+  4. Record heart rate again
+  5. Calculate difference (larger difference = better recovery)
+```
+
+## Program Adherence Tracker
+
+Track overall program adherence to identify areas for improvement.
+
+```
+APEX PROGRAM - ADHERENCE TRACKER
+
+4-Week Period: ___/___/______ to ___/___/______
+
+| Component | Week 1 | Week 2 | Week 3 | Week 4 | Avg |
+|-----------|--------|--------|--------|--------|-----|
+| Training (%) | | | | | |
+| Nutrition (%) | | | | | |
+| Sleep Quality (1-10) | | | | | |
+| Recovery Protocol (%) | | | | | |
+| Supplement Protocol (%) | | | | | |
+| Stress Management (1-10) | | | | | |
+| Overall Effort (1-10) | | | | | |
+
+Areas of Strength:
+__________________________________________________________________
+
+Areas Needing Improvement:
+__________________________________________________________________
+
+Action Plan:
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+Rate of Progress (1-10): _____
+Satisfaction with Program (1-10): _____
+
+Program Adjustments:
+□ No changes needed
+□ Minor adjustments (describe): _______________________________________
+□ Moderate adjustments (describe): ____________________________________
+□ Major revisions needed (describe): __________________________________
+```
+
+## Downloadable Templates
+
+All of these tracking templates are available as downloadable PDFs and editable spreadsheets in the links below:
+
+- [Weekly Workout Tracker (PDF)](#)
+- [Weekly Workout Tracker (Excel)](#)
+- [Body Measurement Log (PDF)](#)
+- [Body Measurement Log (Excel)](#)
+- [Nutrition Tracker (PDF)](#)
+- [Nutrition Tracker (Excel)](#)
+- [Complete APEX Tracking Bundle (ZIP)](#)
+
+## Using These Templates Effectively
+
+1. **Consistency is Key**: Fill out your logs immediately after each workout while details are fresh
+2. **Digital vs. Physical**: Choose the format that works best for you - paper logs or digital spreadsheets
+3. **Review Regularly**: Set aside time weekly to review your data and identify patterns
+4. **Act on Insights**: Use the data to make informed adjustments to your program
+5. **Progress Over Perfection**: Even partially completed logs provide valuable data
+
+Remember that tracking is a means to an end - the goal is to use this information to optimize your progress and results in the APEX program.
+
+=== ./docs/nutrition/index.md ===
+
+---
+layout: default
+title: "Nutrition for Hypertrophy | APEX Program"
+description: "Evidence-based nutrition guidelines for maximizing muscle growth on the APEX hypertrophy program"
+permalink: /docs/nutrition/
+nav_order: 5
+---
+
+# Nutrition for Hypertrophy
+
+Optimal nutrition is essential for maximizing muscle growth. This guide provides evidence-based recommendations to support the APEX hypertrophy program.
+
+> "You can't out-train a poor diet. Nutrition is the foundation upon which your training results are built."
+
+## Table of Contents
+
+- [Caloric Requirements](#caloric-requirements)
+- [Macronutrient Distribution](#macronutrient-distribution)
+- [Meal Timing and Frequency](#meal-timing-and-frequency)
+- [Pre/Intra/Post Workout Nutrition](#preintrapost-workout-nutrition)
+- [Supplement Recommendations](#supplement-recommendations)
+- [Nutritional Periodization](#nutritional-periodization)
+- [Hydration Guidelines](#hydration-guidelines)
+- [Sample Meal Plans](#sample-meal-plans)
+
+## Caloric Requirements
+
+To build muscle effectively, you need to consume more calories than you burn—a caloric surplus. However, the surplus should be moderate to minimize excessive fat gain.
+
+### Calculating Your Needs
+
+1. **Step 1: Calculate Basal Metabolic Rate (BMR)**
+
+   For men:
+   BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) + 5
+
+   For women:
+   BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) - 161
+
+2. **Step 2: Apply Activity Multiplier**
+
+   - Sedentary (office job, minimal exercise): BMR × 1.2
+   - Lightly active (light exercise 1-3 days/week): BMR × 1.375
+   - Moderately active (moderate exercise 3-5 days/week): BMR × 1.55
+   - Very active (intense exercise 6-7 days/week): BMR × 1.725
+   - Extremely active (very intense exercise, physical job): BMR × 1.9
+
+3. **Step 3: Add Hypertrophy Surplus**
+
+   - Beginner lifters: Add 350-500 calories
+   - Intermediate lifters: Add 250-350 calories
+   - Advanced lifters: Add 200-250 calories
+
+### Monitoring and Adjusting
+
+- Track your weight 2-3 times per week in the morning (after using the bathroom, before eating)
+- Calculate weekly averages to assess trends
+- Aim for weight gain of 0.25-0.5% of body weight per week (0.5-1 pound for a 200lb individual)
+- If gaining too quickly, reduce calories by 10%
+- If not gaining, increase calories by 10%
+
+## Macronutrient Distribution
+
+### Protein: The Foundation for Growth
+
+- **Recommended intake**: 1.8-2.2g per kg of bodyweight (0.8-1g per pound)
+- **Optimal distribution**: 4-6 meals with 25-40g protein per meal
+- **Protein quality**: Focus on complete proteins with high leucine content
+- **Best sources**: Whey protein, eggs, chicken, lean beef, fish, Greek yogurt, cottage cheese
+
+### Carbohydrates: Fuel for Performance
+
+- **Recommended intake**: 4-7g per kg of bodyweight (higher on training days)
+- **Training day carbs**: 5-7g/kg
+- **Rest day carbs**: 3-5g/kg
+- **Carb timing**: Higher around workouts, lower further from workouts
+- **Best sources**: Rice, potatoes, oats, fruits, vegetables, whole grains
+
+### Fats: Hormonal Support
+
+- **Recommended intake**: 0.8-1.2g per kg of bodyweight
+- **Essential fats**: Ensure adequate omega-3 intake (2-3g EPA/DHA daily)
+- **Best sources**: Olive oil, nuts, avocados, fatty fish, egg yolks, grass-fed butter
+
+## Meal Timing and Frequency
+
+### Optimal Frequency
+
+- **Protein feeding**: Every 3-5 hours (typically 4-6 meals per day)
+- **Total daily meals**: 4-6 evenly spaced meals optimize muscle protein synthesis
+- **Pre-sleep nutrition**: Slow-digesting protein (casein) can reduce overnight muscle breakdown
+
+### Nutrient Timing
+
+- **Pre-workout**: 1-2 hours before training
+  - 25-40g protein
+  - 40-60g carbohydrates
+  - Low fat (5-10g)
+
+- **Intra-workout**: During training
+  - 5-10g EAAs or 20-30g whey isolate
+  - 20-30g fast-digesting carbs for sessions over 60 minutes
+  - Electrolytes for optimal hydration
+
+- **Post-workout**: Within 30-45 minutes after training
+  - 30-40g fast-digesting protein
+  - 60-80g high-glycemic carbohydrates
+  - Minimal fat (delays nutrient absorption)
+
+=== ./docs/program-overview.md ===
+
+---
+layout: default
+title: Program Overview
+description: "A detailed overview of the APEX (Advanced Physique Enhancement Program)"
+---
+
+# APEX Program Overview
+
+## Program Philosophy
+
+APEX (Advanced Physique Enhancement Program) is built on the scientific principles of hypertrophy optimization. The program combines established training methodologies with cutting-edge techniques to maximize muscle growth while maintaining joint health and training sustainability.
+
+### Scientific Foundation
+
+This program is based on current research in muscle hypertrophy, which emphasizes three primary mechanisms:
+
+1. **Mechanical Tension**: The primary driver of muscle growth, achieved through progressive overload and proper exercise selection
+2. **Metabolic Stress**: The "pump" effect that triggers anabolic signaling, enhanced through advanced techniques and strategic rep ranges
+3. **Muscle Damage**: Controlled muscle damage that stimulates repair and growth, optimized through eccentric emphasis and varied movement patterns
+
+## Target Audience
+
+APEX is designed for:
+
+- **Intermediate to advanced lifters** with at least 1-2 years of consistent training experience
+- **Hypertrophy-focused trainees** prioritizing muscle growth over other training outcomes
+- **Individuals with access to basic strength equipment** (barbells, dumbbells, bench)
+- **Those who can commit to 6 training sessions per week** with adequate recovery capacity
+
+## Program Structure
+
+### Push/Pull/Legs Split
+
+The program uses a PPL split performed twice weekly:
+
+| Day | Training Focus | Key Features |
+|-----|---------------|-------------|
+| 1 | Push A | Chest emphasis, compound movements, pre-exhaustion techniques |
+| 2 | Pull A | Back thickness, deadlift pattern, mechanical advantage drop sets |
+| 3 | Legs A | Quad emphasis, squat variations, high metabolic stress methods |
+| 4 | Push B | Shoulder emphasis, different angles, tempo manipulation |
+| 5 | Pull B | Back width, row variations, mechanical tension maximization |
+| 6 | Legs B | Hamstring/glute emphasis, unilateral work, partial range techniques |
+| 7 | Rest | Active recovery, mobility, light cardio optional |
+
+### Volume and Intensity Parameters
+
+- **Compound exercises**: 4 sets × 8-12 reps (Rest: 90-120 seconds)
+- **Isolation exercises**: 3 sets × 10-15 reps (Rest: 60-90 seconds)
+- **Calves & Abs**: 3-4 sets × 12-20 reps (Rest: 45-60 seconds)
+
+Each workout incorporates one or more advanced intensification techniques strategically applied to maximize stimulus while managing fatigue.
+
+## Equipment Requirements
+
+The program requires:
+
+- **Olympic barbell** (for compound lifts)
+- **Shorter barbell** (for isolation movements)
+- **Adjustable dumbbells** (for unilateral work and isolation)
+- **EZ bar** (for bicep and tricep movements)
+- **Incline bench with barbell rack** (for press variations)
+
+## Advanced Techniques
+
+APEX implements the following advanced training methods:
+
+### Mechanical Drop Sets
+After reaching failure with a challenging exercise variation, immediately switch to a mechanically advantageous variation of the same movement pattern to extend the set.
+
+### Double Rest-Pause
+After reaching failure, rest for 15 seconds, continue to failure again, rest for another 15 seconds, then perform a final push to failure.
+
+### Tempo Manipulation
+Strategic control of movement speed, particularly emphasizing the eccentric (lowering) phase to maximize tension and muscle damage.
+
+### Partial Repetitions
+After reaching failure with full range of motion, continue with partial range repetitions to further fatigue the muscle.
+
+### Pre-Exhaustion
+Perform an isolation exercise immediately before a compound movement for the same muscle group to enhance mind-muscle connection and fully fatigue target muscles.
+
+## Implementation Strategy
+
+For best results, follow this progressive implementation approach:
+
+1. **Weeks 1-2**: Focus on mastering exercise technique and establishing baseline performance
+2. **Weeks 3-4**: Begin implementing basic intensification techniques (tempo, partial reps)
+3. **Weeks 5-6**: Add more advanced techniques (rest-pause, mechanical drop sets)
+4. **Weeks 7-8**: Full implementation of all program components with appropriate autoregulation
+
+## Expected Outcomes
+
+With proper implementation and nutrition, you can expect:
+
+- Significant muscle hypertrophy in targeted muscle groups
+- Improved muscle definition and body composition
+- Enhanced mind-muscle connection
+- Increased work capacity and metabolic conditioning
+- Progressive strength gains in key movement patterns
+
+Before beginning this program, consult with a certified strength and conditioning specialist and your healthcare provider.
+
+=== ./docs/recovery/index.md ===
+
+---
+layout: default
+title: "Recovery Protocols | APEX Program"
+description: "Evidence-based recovery strategies to maximize muscle growth and performance in the APEX hypertrophy program"
+permalink: /docs/recovery/
+nav_order: 6
+---
+
+# Recovery Protocols
+
+Recovery is not simply the absence of training—it's an active process that determines the effectiveness of your hypertrophy program. These evidence-based recovery protocols will help you maximize muscle growth, prevent overtraining, and optimize performance.
+
+> "Recovery is where the magic happens. Training creates the stimulus, but recovery creates the adaptation."
+
+## Table of Contents
+
+- [Sleep Optimization](#sleep-optimization)
+- [Active Recovery Techniques](#active-recovery-techniques)
+- [Stress Management](#stress-management)
+- [Recovery Modalities](#recovery-modalities)
+- [Mobility & Flexibility](#mobility--flexibility)
+- [Deload Protocols](#deload-protocols)
+- [Injury Prevention](#injury-prevention)
+- [Recovery Supplementation](#recovery-supplementation)
+
+## Sleep Optimization
+
+Sleep is the most powerful recovery tool available. During deep sleep, growth hormone secretion peaks, protein synthesis accelerates, and tissue repair occurs.
+
+### Sleep Quantity Guidelines
+
+- **Optimal duration**: 7-9 hours per night
+- **Athletes' needs**: Closer to the upper end (8-9 hours) during intense training phases
+- **Sleep debt**: Cannot be effectively "made up" on weekends
+
+### Sleep Quality Optimization
+
+1. **Environment Optimization**
+   - Room temperature: 60-67°F (15.5-19.5°C)
+   - Complete darkness (use blackout curtains)
+   - White noise or silence based on preference
+   - Quality mattress and pillows
+
+2. **Pre-Sleep Routine**
+   - Consistent sleep/wake schedule (even on weekends)
+   - Avoid blue light 1-2 hours before bed (use blue light filters)
+   - Create a wind-down ritual (reading, light stretching, meditation)
+   - Avoid stimulants after 2-4pm (individual sensitivity varies)
+
+3. **Nutrition for Sleep**
+   - Casein protein before bed (provides amino acids throughout night)
+   - Magnesium (200-400mg glycinate or threonate form)
+   - Tart cherry juice (natural melatonin source)
+   - Avoid large meals within 2 hours of bedtime
+
+4. **Technology & Tracking**
+   - Consider sleep tracking apps or devices (Oura Ring, Whoop, etc.)
+   - Use smart alarm apps that wake you during light sleep
+   - Set devices to night mode or Do Not Disturb
+
+## Active Recovery Techniques
+
+Strategic low-intensity activity can enhance recovery by increasing blood flow without creating additional fatigue.
+
+### Daily Movement Practices
+
+- **Walking**: 8,000-10,000 steps daily (separate from training)
+- **Light cycling**: 20-30 minutes at conversation pace
+- **Swimming**: Gentle, technique-focused sessions
+- **Yoga**: Restorative or gentle flow styles
+
+### Strategic Timing
+
+- **Between workouts**: Light activity 6-8 hours after or before training
+- **Rest days**: 30-45 minutes of zone 1-2 cardio (heart rate below 120-130 bpm)
+- **Deload weeks**: Daily movement with emphasis on enjoyment
+
+### Muscle-Specific Activation
+
+- **Antagonist facilitation**: Light activity for opposing muscle groups
+- **Movement preparation**: Dynamic mobility for previously trained areas
+- **Blood flow restriction**: Very light weights (20-30% 1RM) with BFR bands
+
+## Stress Management
+
+Chronic stress elevates cortisol, impairs recovery, and inhibits muscle growth. Effective stress management is crucial for hypertrophy.
+
+### Practical Stress Reduction Techniques
+
+1. **Breathing Practices**
+   - Box breathing: 4-4-4-4 pattern (inhale-hold-exhale-hold)
+   - 4-7-8 breathing: Inhale for 4, hold for 7, exhale for 8
+   - Practice for 5-10 minutes daily
+
+2. **Mindfulness & Meditation**
+   - Guided meditation apps (Headspace, Calm, Waking Up)
+   - Body scan relaxation (progressive muscle relaxation)
+   - Mindful walking or movement
+
+3. **Nature Exposure**
+   - Forest bathing (shinrin-yoku)
+   - Outdoor training sessions once weekly
+   - Morning sunlight exposure (15-30 minutes)
+
+4. **Technology Management**
+   - Social media limits or fasting
+   - Notification minimization
+   - Digital sunset 1-2 hours before bed
+
+### Parasympathetic Activation
+
+- **Heart rate variability (HRV) training**
+- **Cold exposure**: Brief cold showers or ice baths
+- **Sauna sessions**: 15-20 minutes at 170-200°F
+- **Contrast therapy**: Alternating hot and cold
+
+## Recovery Modalities
+
+Various recovery modalities can be strategically implemented to enhance muscle recovery and growth.
+
+### Massage & Self-Myofascial Release
+
+1. **Foam Rolling Protocols**
+   - Pre-workout: Light pressure, 30-60 seconds per muscle group
+   - Post-workout: Moderate pressure, 60-90 seconds per muscle group
+   - Recovery days: Deeper pressure, 2-3 minutes per problem area
+   - Focus on technique: Slow speed (1 inch per second)
+
+2. **Massage Tools**
+   - Percussion devices (Theragun, Hypervolt): 60-120 seconds per muscle
+   - Lacrosse balls for trigger points: 30-60 seconds per spot
+   - Pressure point tools for hard-to-reach areas
+
+3. **Professional Massage**
+   - Deep tissue: Once every 2-4 weeks
+   - Sports massage: During high-volume training phases
+   - Timing: 24-48 hours after hardest training sessions
+
+### Temperature Therapies
+
+1. **Cold Therapy Applications**
+   - Ice baths: 50-59°F (10-15°C) for 8-10 minutes
+   - Cold showers: 2-5 minutes at coolest comfortable temperature
+   - Local ice application: 10-15 minutes for acute inflammation
+   - Timing: Within 1-2 hours post-workout for inflammation management
+
+2. **Heat Applications**
+   - Sauna: 170-200°F for 15-20 minutes, 2-3 times weekly
+   - Hot baths: 100-104°F with Epsom salts (1-2 cups)
+   - Heating pads: 15-20 minutes for chronic tight areas
+   - Timing: Not immediately post-workout; best on recovery days
+
+3. **Contrast Therapy**
+   - Protocol: 1-minute cold followed by 3 minutes heat
+   - Repeat 3-5 cycles, always ending with cold
+   - Application: Full body or localized to specific muscles
+   - Frequency: 1-2 times weekly during intense training phases
+
+### Recovery Technology
+
+1. **Compression**
+   - Static compression garments: Worn for 1-2 hours post-workout
+   - Intermittent pneumatic compression (Normatec): 20-30 minute sessions
+   - Timing: Within 1-3 hours post-workout
+
+2. **Electrical Stimulation**
+   - TENS for pain management: 10-15 minutes on affected areas
+   - NMES for activation: 10-minute sessions on recovery days
+   - Frequency: As needed for specific issues
+
+## Mobility & Flexibility
+
+Maintaining and improving range of motion is essential for proper exercise execution and injury prevention.
+
+### Daily Mobility Routine (10-15 minutes)
+
+1. **Upper Body Focus**
+   - Shoulder CARs (Controlled Articular Rotations)
+   - Thoracic extensions over foam roller
+   - Wall slides for scapular mobility
+   - Neck mobility series
+
+2. **Lower Body Focus**
+   - Hip CARs and 90/90 transitions
+   - Ankle mobility (knee-to-wall)
+   - Adductor rockbacks
+   - Calf/soleus stretching sequence
+
+3. **Core & Spine**
+   - Cat-cow flow
+   - Thread the needle rotations
+   - Segmental bridging
+   - Active spinal twists
+
+### Strategic Flexibility Programming
+
+1. **Post-Workout Stretching**
+   - Target worked muscle groups
+   - Hold stretches for 30-45 seconds
+   - Focus on relaxed breathing
+   - Gentle intensity (6/10 sensation)
+
+2. **Dedicated Mobility Sessions**
+   - 2-3 sessions weekly (20-30 minutes)
+   - Combine static and dynamic approaches
+   - Focus on problem areas identified in movement assessment
+   - Progressive improvements in range
+
+3. **Practical Applications**
+   - Pre-chest/shoulder sessions: Thoracic mobility emphasis
+   - Pre-lower body sessions: Hip and ankle mobility emphasis
+   - Recovery days: Full-body approach
+
+## Deload Protocols
+
+Strategically reducing training volume and/or intensity allows for supercompensation and prevents overtraining.
+
+### Deload Scheduling
+
+- **Fixed deloads**: Every 4-6 weeks regardless of readiness
+- **Autoregulated deloads**: Based on performance metrics and readiness scores
+- **Split deloads**: Deloading different body parts in different weeks
+
+### Deload Models
+
+1. **Volume Reduction**
+   - Maintain intensity (weight on bar)
+   - Reduce sets by 40-50%
+   - Maintain exercise selection
+   - Best for experienced lifters
+
+2. **Intensity Reduction**
+   - Maintain volume (total sets)
+   - Reduce weights by 20-30%
+   - Focus on perfect technique
+   - Great for technique refinement
+
+3. **Frequency Reduction**
+   - Reduce training frequency by 1-2 sessions
+   - Maintain intensity and volume in remaining sessions
+   - Effective for recovery from accumulated fatigue
+
+4. **Exercise Substitution**
+   - Replace main lifts with variations
+   - Focus on technique and mind-muscle connection
+   - Reduce loading by 20-30%
+   - Useful for joint recovery
+
+### Sample Deload Week
+
+| Day | Training Focus | Volume | Intensity | Notes |
+|-----|----------------|--------|-----------|-------|
+| 1 | Push | 50% normal sets | 80% normal weight | Remove advanced techniques |
+| 2 | Pull | 50% normal sets | 80% normal weight | Focus on mind-muscle connection |
+| 3 | Legs | 50% normal sets | 80% normal weight | Emphasize perfect technique |
+| 4 | Rest | - | - | Active recovery only |
+| 5 | Push | 50% normal sets | 80% normal weight | Remove advanced techniques |
+| 6 | Pull | 50% normal sets | 80% normal weight | Focus on mind-muscle connection |
+| 7 | Rest | - | - | Complete recovery day |
+
+## Injury Prevention
+
+Proactive injury prevention strategies are essential for consistent training and long-term progress.
+
+### Prehabilitation Protocols
+
+1. **Shoulder Health**
+   - External rotation strengthening: 2-3 sets of 15-20 reps, 2-3x weekly
+   - Face pulls with external rotation: 2-3 sets of 15-20 reps, 2-3x weekly
+   - Band pull-aparts: Daily, 2-3 sets of 15-20 reps
+   - Scapular wall slides: Daily, 2 sets of 10 reps
+
+2. **Knee Protection**
+   - Terminal knee extensions: 2-3 sets of 15-20 reps, 2-3x weekly
+   - Spanish squats: 2-3 sets of 30-45 seconds, 2x weekly
+   - VMO activation drills: 2 sets of 15 reps, 2-3x weekly
+   - Proper warm-up before leg training: 5-10 minutes minimum
+
+3. **Lower Back Care**
+   - McGill Big 3 (curl-ups, side planks, bird dogs): Daily, 1-2 sets
+   - Cat-cow flow: Daily, 10-15 cycles
+   - Hip hinge patterning: 2-3 sets of 10 reps, 2-3x weekly
+   - Dead bug variations: 2-3 sets of 8-12 reps per side, 2-3x weekly
+
+### Technique Refinement
+
+- **Video analysis**: Record key lifts monthly for technique assessment
+- **Tempo training**: Periodically implement controlled tempos to reinforce proper movement
+- **Technical deloads**: Occasional sessions with lighter weights focusing exclusively on perfect form
+- **Coaching feedback**: Regular form checks with qualified coaches
+
+## Recovery Supplementation
+
+Certain supplements can enhance recovery processes when used correctly alongside proper nutrition.
+
+### Core Recovery Supplements
+
+1. **Omega-3 Fatty Acids**
+   - **Dosage**: 2-3g EPA/DHA combined daily
+   - **Benefits**: Reduced inflammation, enhanced nutrient partitioning
+   - **Timing**: With meals containing fat
+   - **Source**: Fish oil or algae-based supplements
+
+2. **Magnesium**
+   - **Dosage**: 300-400mg daily (glycinate, threonate, or malate forms)
+   - **Benefits**: Muscle relaxation, improved sleep, reduced cramps
+   - **Timing**: Before bed for sleep enhancement
+   - **Notes**: Particularly important during intense training phases
+
+3. **Vitamin D3**
+   - **Dosage**: 2000-5000 IU daily (based on blood work)
+   - **Benefits**: Hormone optimization, immune function, recovery
+   - **Timing**: Morning with fat-containing meal
+   - **Notes**: Test levels first; aim for 40-60 ng/mL blood levels
+
+### Specialized Recovery Agents
+
+1. **Tart Cherry Extract**
+   - **Dosage**: 480-500mg or 8-12 oz tart cherry juice
+   - **Benefits**: Reduced DOMS, improved sleep quality
+   - **Timing**: Before bed or post-workout
+   - **Notes**: Most effective during high-volume training phases
+
+2. **Curcumin (with piperine)**
+   - **Dosage**: 500-1000mg daily
+   - **Benefits**: Reduced inflammation, enhanced recovery
+   - **Timing**: With meals containing fat
+   - **Notes**: Look for enhanced bioavailability formulations
+
+3. **Ashwagandha**
+   - **Dosage**: 300-600mg daily
+   - **Benefits**: Stress reduction, cortisol management, potential testosterone support
+   - **Timing**: Morning and/or evening
+   - **Notes**: Most beneficial during high-stress periods
+
+4. **L-Theanine**
+   - **Dosage**: 100-200mg
+   - **Benefits**: Improved sleep quality, reduced anxiety
+   - **Timing**: 30-60 minutes before bed
+   - **Notes**: Can be combined with magnesium for enhanced effects
+
+=== ./docs/references/index.md ===
+
+---
+layout: default
+title: "Scientific References | APEX Program"
+description: "Evidence-based research supporting the APEX hypertrophy program principles and methodologies"
+permalink: /docs/references/
+nav_order: 8
+---
+
+# Scientific References
+
+The APEX program is grounded in scientific evidence and research-backed principles for optimizing muscle hypertrophy. This page provides references to key studies that support the program design, methodology, and recommended practices.
+
+## Table of Contents
+
+- [Training Volume & Frequency](#training-volume--frequency)
+- [Exercise Selection & Order](#exercise-selection--order)
+- [Specialized Techniques](#specialized-techniques)
+- [Rest Periods & Recovery](#rest-periods--recovery)
+- [Nutritional Strategies](#nutritional-strategies)
+- [Supplementation](#supplementation)
+- [Periodization Approaches](#periodization-approaches)
+
+## Training Volume & Frequency
+
+### Weekly Volume Thresholds
+
+1. Schoenfeld, B. J., Ogborn, D., & Krieger, J. W. (2017). Dose-response relationship between weekly resistance training volume and increases in muscle mass: A systematic review and meta-analysis. Journal of Sports Sciences, 35(11), 1073-1082.
+   - **Key Finding**: 10+ sets per muscle group per week was superior for hypertrophy compared to lower volumes
+
+2. Ralston, G. W., Kilgore, L., Wyatt, F. B., & Baker, J. S. (2017). The effect of weekly set volume on strength gain: a meta-analysis. Sports Medicine, 47(12), 2585-2601.
+   - **Key Finding**: Higher weekly sets (up to 10+ sets/muscle/week) were associated with greater strength gains
+
+3. Haun, C. T., Vann, C. G., Roberts, B. M., Vigotsky, A. D., Schoenfeld, B. J., & Roberts, M. D. (2019). A critical evaluation of the biological construct skeletal muscle hypertrophy: size matters but so does the measurement. Frontiers in Physiology, 10, 247.
+   - **Key Finding**: Higher training volumes generally stimulate greater hypertrophy, with upper limits still being investigated
+
+### Training Frequency
+
+4. Schoenfeld, B. J., Grgic, J., & Krieger, J. (2019). How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency. Journal of Sports Sciences, 37(11), 1286-1295.
+   - **Key Finding**: Training muscle groups 2+ times per week produced superior hypertrophy compared to once per week when volume was equated
+
+5. Zaroni, R. S., Brigatto, F. A., Schoenfeld, B. J., Braz, T. V., Benvenutti, J. C., Germano, M. D., ... & Lopes, C. R. (2019). High resistance training frequency enhances muscle thickness in resistance-trained men. Journal of Strength and Conditioning Research, 33, S140-S151.
+   - **Key Finding**: Higher training frequencies (4-5 times/week) were superior to moderate frequencies (2-3 times/week) for hypertrophy
+
+6. Colquhoun, R. J., Gai, C. M., Aguilar, D., Bove, D., Dolan, J., Vargas, A., ... & Campbell, B. I. (2018). Training volume, not frequency, indicative of maximal strength adaptations to resistance training. Journal of Strength and Conditioning Research, 32(5), 1207-1213.
+   - **Key Finding**: Total training volume was more important than frequency for strength and size gains
+
+## Exercise Selection & Order
+
+### Compound vs. Isolation Movements
+
+7. Paoli, A., Gentil, P., Moro, T., Marcolin, G., & Bianco, A. (2017). Resistance training with single vs. multi-joint exercises at equal total load volume: effects on body composition, cardiorespiratory fitness, and muscle strength. Frontiers in Physiology, 8, 1105.
+   - **Key Finding**: Multi-joint exercises produced similar hypertrophy with better strength outcomes compared to isolation exercises at equal volume
+
+8. Gentil, P., Soares, S. R., Pereira, M. C., Cunha, R. R., Martorelli, S. S., Martorelli, A. S., & Bottaro, M. (2013). Effect of adding single-joint exercises to a multi-joint exercise resistance training program on strength and hypertrophy in untrained subjects. Applied Physiology, Nutrition, and Metabolism, 38(3), 341-344.
+   - **Key Finding**: Adding isolation exercises to a compound-based program increased arm hypertrophy compared to compound exercises alone
+
+### Exercise Variation
+
+9. Fonseca, R. M., Roschel, H., Tricoli, V., de Souza, E. O., Wilson, J. M., Laurentino, G. C., ... & Ugrinowitsch, C. (2014). Changes in exercises are more effective than in loading schemes to improve muscle strength. Journal of Strength and Conditioning Research, 28(11), 3085-3092.
+   - **Key Finding**: Changing exercises was more effective for continued progress than manipulating only sets and reps
+
+10. Baz-Valle, E., Fontes-Villalba, M., & Santos-Concejero, J. (2018). Total number of sets as a training volume quantification method for muscle hypertrophy: a systematic review. Journal of Strength and Conditioning Research, 33(10), e207.
+    - **Key Finding**: Including exercise variation is beneficial for targeting different regions of muscle groups and potentially overcoming plateaus
+
+### Exercise Order
+
+11. Simão, R., De Salles, B. F., Figueiredo, T., Dias, I., & Willardson, J. M. (2012). Exercise order in resistance training. Sports Medicine, 42(3), 251-265.
+    - **Key Finding**: Exercises performed early in a session show greater strength increases than those performed later
+
+12. Sforzo, G. A., & Touey, P. R. (1996). Manipulating exercise order affects muscular performance during a resistance exercise training session. The Journal of Strength & Conditioning Research, 10(1), 20-24.
+    - **Key Finding**: Exercise order significantly impacts performance, with early exercises showing greater total work capacity
+
+## Specialized Techniques
+
+### Rest-Pause Training
+
+13. Prestes, J., Tibana, R. A., de Araujo Sousa, E., da Cunha Nascimento, D., de Oliveira Rocha, P., Camarço, N. F., ... & Willardson, J. M. (2019). Strength and muscular adaptations after 6 weeks of rest-pause versus traditional multiple-sets resistance training in trained subjects. Journal of Strength and Conditioning Research, 33, S113-S121.
+    - **Key Finding**: Rest-pause training produced similar strength and hypertrophy gains with shorter workout duration compared to traditional approaches
+
+14. Marshall, P. W., Robbins, D. A., Wrightson, A. W., & Siegler, J. C. (2012). Acute neuromuscular and fatigue responses to the rest-pause method. Journal of Science and Medicine in Sport, 15(2), 153-158.
+    - **Key Finding**: Rest-pause methodologies created greater acute fatigue and muscle activation compared to traditional sets
+
+### Tempo Manipulation
+
+15. Wilk, M., Golas, A., Stastny, P., Nawrocka, M., Krzysztofik, M., & Zajac, A. (2018). Does tempo of resistance exercise impact training volume? Journal of Human Kinetics, 62(1), 241-250.
+    - **Key Finding**: Slower tempos reduced the number of repetitions performed but potentially increased time under tension
+
+16. Burd, N. A., Andrews, R. J., West, D. W., Little, J. P., Cochran, A. J., Hector, A. J., ... & Phillips, S. M. (2012). Muscle time under tension during resistance exercise stimulates differential muscle protein sub-fractional synthetic responses in men. The Journal of Physiology, 590(2), 351-362.
+    - **Key Finding**: Longer time under tension increased myofibrillar protein synthesis responses
+
+### Pre-Exhaustion
+
+17. Júnior, V. A. R., Bottaro, M., Pereira, M. C., Andrade, M. M., Júnior, P. R. W. P., & Carmo, J. C. (2010). Electromyographic analyses of muscle pre-activation induced by single joint exercise. Brazilian Journal of Physical Therapy, 14(2), 158-165.
+    - **Key Finding**: Pre-exhaustion with isolation exercises increased EMG activity during subsequent compound movements for target muscles
+
+18. Brennecke, A., Guimarães, T. M., Leone, R., Cadarci, M., Mochizuki, L., Simão, R., ... & Serrão, J. C. (2009). Neuromuscular activity during bench press exercise performed with and without the preexhaustion method. The Journal of Strength & Conditioning Research, 23(7), 1933-1940.
+    - **Key Finding**: Pre-exhaustion altered muscle recruitment patterns during compound movements
+
+## Rest Periods & Recovery
+
+### Inter-Set Rest Periods
+
+19. Schoenfeld, B. J., Pope, Z. K., Benik, F. M., Hester, G. M., Sellers, J., Nooner, J. L., ... & Krieger, J. W. (2016). Longer interset rest periods enhance muscle strength and hypertrophy in resistance-trained men. Journal of Strength and Conditioning Research, 30(7), 1805-1812.
+    - **Key Finding**: Longer rest periods (3 minutes vs. 1 minute) produced greater hypertrophy and strength gains
+
+20. de Salles, B. F., Simão, R., Miranda, F., Novaes, J. D. S., Lemos, A., & Willardson, J. M. (2009). Rest interval between sets in strength training. Sports Medicine, 39(9), 765-777.
+    - **Key Finding**: Different rest intervals produce different metabolic, hormonal, and performance outcomes based on training goals
+
+### Recovery Between Sessions
+
+21. McLester, J. R., Bishop, P. A., Smith, J., Wyers, L., Dale, B., Kozusko, J., ... & Lomax, R. (2003). A series of studies—a practical protocol for testing muscular endurance recovery. The Journal of Strength & Conditioning Research, 17(2), 259-273.
+    - **Key Finding**: Most participants required 48-72 hours for full recovery of muscle function between high-volume resistance sessions
+
+22. Bishop, P. A., Jones, E., & Woods, A. K. (2008). Recovery from training: a brief review. The Journal of Strength & Conditioning Research, 22(3), 1015-1024.
+    - **Key Finding**: Recovery needs vary based on individual differences, training history, and workout volume/intensity
+
+### Sleep and Recovery
+
+23. Dattilo, M., Antunes, H. K. M., Medeiros, A., Mônico Neto, M., Souza, H. S., Tufik, S., & De Mello, M. T. (2011). Sleep and muscle recovery: endocrinological and molecular basis for a new and promising hypothesis. Medical Hypotheses, 77(2), 220-222.
+    - **Key Finding**: Sleep deprivation can inhibit muscle recovery through multiple pathways
+
+24. Fullagar, H. H., Skorski, S., Duffield, R., Hammes, D., Coutts, A. J., & Meyer, T. (2015). Sleep and athletic performance: the effects of sleep loss on exercise performance, and physiological and cognitive responses to exercise. Sports Medicine, 45(2), 161-186.
+    - **Key Finding**: Sleep optimization is critical for athletic performance and recovery
+
+## Nutritional Strategies
+
+### Protein Requirements
+
+25. Morton, R. W., Murphy, K. T., McKellar, S. R., Schoenfeld, B. J., Henselmans, M., Helms, E., ... & Phillips, S. M. (2018). A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. British Journal of Sports Medicine, 52(6), 376-384.
+    - **Key Finding**: Protein intake of ~1.6g/kg/day was sufficient for maximizing resistance-training-induced gains in muscle mass
+
+26. Bandegan, A., Courtney-Martin, G., Rafii, M., Pencharz, P. B., & Lemon, P. W. (2017). Indicator amino acid-derived estimate of dietary protein requirement for male bodybuilders on a nontraining day is several-fold greater than the current Recommended Dietary Allowance. The Journal of Nutrition, 147(5), 850-857.
+    - **Key Finding**: Protein requirements for trained individuals may be higher than previously thought (~2.2g/kg/day)
+
+### Meal Frequency and Timing
+
+27. Schoenfeld, B. J., Aragon, A. A., & Krieger, J. W. (2013). The effect of protein timing on muscle strength and hypertrophy: a meta-analysis. Journal of the International Society of Sports Nutrition, 10(1), 53.
+    - **Key Finding**: Overall daily protein intake is more important than specific timing, though post-workout protein may still provide some benefit
+
+28. Areta, J. L., Burke, L. M., Ross, M. L., Camera, D. M., West, D. W., Broad, E. M., ... & Hawley, J. A. (2013). Timing and distribution of protein ingestion during prolonged recovery from resistance exercise alters myofibrillar protein synthesis. The Journal of Physiology, 591(9), 2319-2331.
+    - **Key Finding**: Distributing protein intake evenly throughout the day (20g every 3 hours) was superior for muscle protein synthesis
+
+### Caloric Surplus
+
+29. Garthe, I., Raastad, T., Refsnes, P. E., Koivisto, A., & Sundgot-Borgen, J. (2013). Effect of two different weight-loss rates on body composition and strength and power-related performance in elite athletes. International Journal of Sport Nutrition and Exercise Metabolism, 23(1), 97-104.
+    - **Key Finding**: Moderate caloric surplus (0.7% body weight gain per week) was more effective for lean mass gains than aggressive caloric surplus
+
+30. Slater, G. J., Dieter, B. P., Marsh, D. J., Helms, E. R., Shaw, G., & Iraki, J. (2019). Is an energy surplus required to maximize skeletal muscle hypertrophy associated with resistance training. Frontiers in Nutrition, 6, 131.
+    - **Key Finding**: A small energy surplus facilitates muscle hypertrophy while minimizing fat gain
+
+## Supplementation
+
+### Creatine Monohydrate
+
+31. Kreider, R. B., Kalman, D. S., Antonio, J., Ziegenfuss, T. N., Wildman, R., Collins, R., ... & Lopez, H. L. (2017). International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine. Journal of the International Society of Sports Nutrition, 14(1), 18.
+    - **Key Finding**: Creatine monohydrate is the most effective ergogenic nutritional supplement for increasing high-intensity exercise capacity and lean body mass
+
+32. Chilibeck, P. D., Kaviani, M., Candow, D. G., & Zello, G. A. (2017). Effect of creatine supplementation during resistance training on lean tissue mass and muscular strength in older adults: a meta-analysis. Open Access Journal of Sports Medicine, 8, 213.
+    - **Key Finding**: Creatine supplementation during resistance training amplifies total and lean body mass
+
+### Protein Supplementation
+
+33. Davies, R. W., Carson, B. P., & Jakeman, P. M. (2018). The effect of whey protein supplementation on the temporal recovery of muscle function following resistance training: a systematic review and meta-analysis. Nutrients, 10(2), 221.
+    - **Key Finding**: Whey protein supplementation improves recovery of muscle function and may reduce muscle damage
+
+34. Naclerio, F., & Larumbe-Zabala, E. (2016). Effects of whey protein alone or as part of a multi-ingredient formulation on strength, fat-free mass, or lean body mass in resistance-trained individuals: a meta-analysis. Sports Medicine, 46(1), 125-137.
+    - **Key Finding**: Whey protein alone or as part of a multi-ingredient supplement produced improvements in fat-free mass when combined with resistance training
+
+### Additional Supplements
+
+35. Trexler, E. T., Smith-Ryan, A. E., Stout, J. R., Hoffman, J. R., Wilborn, C. D., Sale, C., ... & Campbell, B. (2015). International society of sports nutrition position stand: Beta-Alanine. Journal of the International Society of Sports Nutrition, 12(1), 30.
+    - **Key Finding**: Beta-alanine supplementation (3-6g daily) increases muscle carnosine concentrations and improves exercise performance
+
+36. Gonzalez, A. M., & Trexler, E. T. (2020). Effects of Citrulline Supplementation on Exercise Performance in Humans: A Review of the Current Literature. Journal of
+
+=== ./docs/techniques/index.md ===
+
+
+
+=== ./docs/workouts/index.md ===
+
+---
+layout: default
+title: "Workouts | APEX Program"
+description: "Complete workout guide for the APEX 6-day Push/Pull/Legs hypertrophy program"
+permalink: /docs/workouts/
+---
+
+# APEX Workout Program
+
+The APEX program follows a 6-day Push/Pull/Legs split performed twice weekly. This structure optimizes training frequency, volume, and recovery for maximum hypertrophy.
+
+## Training Split Overview
+
+- **Day 1: Push A** - Chest-focused with shoulder and triceps work
+- **Day 2: Pull A** - Back-focused with biceps and trapezius work
+- **Day 3: Legs A** - Quad-focused with complete lower body development
+- **Day 4: Push B** - Shoulder-focused with chest and triceps work
+- **Day 5: Pull B** - Lat-focused with biceps and rear deltoid work
+- **Day 6: Legs B** - Hamstring and glute-focused with complete lower body development
+- **Day 7: Rest** - Active recovery and complete rest
+
+## Weekly Schedule
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Workout</th>
+    <th>Primary Focus</th>
+    <th>Volume</th>
+    <th>Key Techniques</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><a href="{{ site.baseurl }}/docs/workouts/week1/day1-push-a/">Push A</a></td>
+    <td>Chest</td>
+    <td>23-28 sets</td>
+    <td>Pre-exhaustion, Double rest-pause</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><a href="{{ site.baseurl }}/docs/workouts/week1/day2-pull-a/">Pull A</a></td>
+    <td>Back thickness</td>
+    <td>22-27 sets</td>
+    <td>Speed control, Mechanical drop sets</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><a href="{{ site.baseurl }}/docs/workouts/week1/day3-legs-a/">Legs A</a></td>
+    <td>Quads</td>
+    <td>24-30 sets</td>
+    <td>Pre-exhaustion, Double rest-pause</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><a href="{{ site.baseurl }}/docs/workouts/week1/day4-push-b/">Push B</a></td>
+    <td>Shoulders</td>
+    <td>23-28 sets</td>
+    <td>Pre-exhaustion, Partial reps</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><a href="{{ site.baseurl }}/docs/workouts/week1/day5-pull-b/">Pull B</a></td>
+    <td>Back width</td>
+    <td>22-27 sets</td>
+    <td>Double rest-pause, Peak contractions</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><a href="{{ site.baseurl }}/docs/workouts/week1/day6-legs-b/">Legs B</a></td>
+    <td>Hamstrings/Glutes</td>
+    <td>24-30 sets</td>
+    <td>Pre-exhaustion, 1.5 rep technique</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Rest</td>
+    <td>Recovery</td>
+    <td>Active recovery only</td>
+    <td>Mobility work, light cardio</td>
+  </tr>
+</table>
+
+## Exercise Selection Principles
+
+The APEX program follows specific exercise selection principles to maximize hypertrophy:
+
+1. **Compound First (Usually)**: Most workouts begin with compound movements to target multiple muscle groups when energy is highest
+2. **Pre-exhaustion Exception**: Some workouts use pre-exhaustion, starting with isolation exercises to enhance mind-muscle connection
+3. **Exercise Variety**: Each muscle group is targeted with multiple exercises from different angles
+4. **Strategic Sequencing**: Exercises are ordered to maximize fatigue in target muscles while minimizing fatigue in supporting muscles
+5. **Equipment Optimization**: Exercise selection is optimized for the available equipment (barbell, dumbbells, EZ bar, incline bench)
+
+## Workout Structure
+
+Each workout follows this general structure:
+
+1. **Warm-up**: 5-10 minutes general warm-up plus specific activation for target muscles
+2. **Main Working Sets**: 4-7 exercises targeting primary and secondary muscle groups
+3. **Advanced Techniques**: Strategic implementation of specialized hypertrophy techniques
+4. **Cool-down**: Brief stretching for worked muscle groups (optional)
+
+## Week 1 Workouts
+
+Begin the APEX program with these detailed workout guides:
+
+- [Day 1: Push A Workout](/apex/docs/workouts/week1/day1-push-a/)
+- [Day 2: Pull A Workout](/apex/docs/workouts/week1/day2-pull-a/)
+- [Day 3: Legs A Workout](/apex/docs/workouts/week1/day3-legs-a/)
+- [Day 4: Push B Workout](/apex/docs/workouts/week1/day4-push-b/)
+- [Day 5: Pull B Workout](/apex/docs/workouts/week1/day5-pull-b/)
+- [Day 6: Legs B Workout](/apex/docs/workouts/week1/day6-legs-b/)
+
+## Advanced Training Techniques
+
+The APEX program incorporates various advanced techniques to maximize hypertrophy stimulus:
+
+- [Mechanical Drop Sets](/apex/docs/techniques/mechanical-drop-sets/)
+- [Double Rest-Pause Method](/apex/docs/techniques/rest-pause/)
+- [Tempo Manipulation](/apex/docs/techniques/tempo-training/)
+- [Pre-Exhaustion](/apex/docs/techniques/pre-exhaustion/)
+- [Partial Reps](/apex/docs/techniques/partial-reps/)
+
+See the [Advanced Techniques Guide](/apex/docs/techniques/) for complete implementation details.
+
+[Start Week 1 →](/apex/docs/workouts/week1/day1-push-a/){: .btn .btn-secondary}
+
+=== ./docs/workouts/week1/day1-push-a.md ===
+
+---
+layout: default
+title: "Day 1: Push Workout A | APEX Program"
+description: "Detailed guide for the Day 1 Push workout focusing on chest, shoulders, and triceps hypertrophy"
+permalink: /docs/workouts/week1/day1-push-a/
+nav_order: 1
+parent: "Week 1"
+---
+
+# Day 1: Push Workout A (Chest, Shoulders, Triceps)
+
+## Workout Overview
+
+- **Focus**: Chest-dominant push session with shoulder and triceps development
+- **Duration**: Approximately 65-75 minutes
+- **Intensity Techniques**: Pre-exhaustion, double rest-pause, reduced rest periods, partial reps
+- **Equipment Needed**: Dumbbells, barbell, EZ bar, incline bench
+
+## Warm-up Protocol
+
+1. **General Warm-up**: 5 minutes of light cardio (jumping jacks, arm circles, light jogging)
+2. **Dynamic Mobility**: 
+   - Arm circles: 20 forward, 20 backward
+   - Scapular wall slides: 15 reps
+   - Band pull-aparts: 20 reps
+   - Push-up to downward dog: 10 reps
+3. **Activation Sets**: 
+   - Push-ups: 2 sets of 10-15 reps
+   - Very light lateral raises: 1 set of 15-20 reps
+
+## Exercise Table
+
+| Exercise | Sets | Reps | Rest | Technique | Notes |
+|----------|------|------|------|-----------|-------|
+| Dumbbell Flyes | 3 | 12-15 | 60s | Pre-exhaustion | Focus on chest stretch |
+| Bench Press | 4 | 8-10 | 90s | Reduced rest | Progressive load increase |
+| Incline Dumbbell Press | 4 | 10-12 | 90s | Double rest-pause (last set) | 45° incline angle |
+| Military Press | 4 | 8-10 | 90s | Partial reps (last set) | Full ROM for first 3 sets |
+| Dumbbell Lateral Raise | 3 | 12-15 | 60s | Superset with next exercise | Controlled tempo |
+| Overhead Triceps Extension | 3 | 10-12 | 60s | 3:1:3 tempo | Controlled eccentric |
+| Triceps Kickbacks | 3 | 12-15 | 60s | 1s peak contraction | Elbows tight to body |
+
+## Exercise Descriptions
+
+### Dumbbell Flyes
+
+**Target Muscles**: Chest (primary), Shoulders (secondary)
+
+**Execution**:
+1. Lie back on a flat bench holding two dumbbells directly above your chest with palms facing each other
+2. Lower the dumbbells in an arc motion until you feel a stretch across your chest
+3. Maintain a slight bend in the elbows throughout the movement
+4. Use the pectoral muscles to bring the dumbbells back together in an arc motion
+5. Execute with a 2:1:2 tempo (2s down, 1s hold, 2s up)
+
+**Key Technical Points**:
+- Keep a slight bend in the elbows throughout the movement
+- Focus on feeling the stretch across the chest at the bottom
+- Visualize hugging a barrel during the concentric phase
+- Keep the shoulder blades retracted and stable
+
+**Common Errors**:
+- Flattening the back by not maintaining scapular retraction
+- Using too much weight and turning the movement into a press
+- Allowing the elbows to straighten completely
+
+### Bench Press
+
+**Target Muscles**: Chest (primary), Shoulders and Triceps (secondary)
+
+**Execution**:
+1. Lie on a flat bench with feet firmly planted on the floor
+2. Grip the barbell slightly wider than shoulder-width
+3. Unrack the bar and position it above the mid-chest
+4. Lower the bar with control to mid-chest
+5. Press the bar back up to the starting position by pushing yourself away from the bar
+
+**Key Technical Points**:
+- Maintain a natural arch in the lower back
+- Drive through the feet to create a stable platform
+- Keep the wrists straight and elbows tucked at approximately 45-degree angles
+- Control the eccentric (lowering) phase for 2 seconds
+
+**Common Errors**:
+- Bouncing the bar off the chest
+- Flaring the elbows excessively (increases shoulder stress)
+- Lifting the hips off the bench
+- Inconsistent bar path
+
+### Incline Dumbbell Press
+
+**Target Muscles**: Upper Chest (primary), Shoulders and Triceps (secondary)
+
+**Execution**:
+1. Set an adjustable bench to 45 degrees
+2. Sit with back firmly against the pad, feet flat on the floor
+3. Hold dumbbells just outside shoulder width at shoulder level
+4. Press the dumbbells up and slightly inward until arms are extended
+5. Lower with control back to the starting position
+
+**Key Technical Points**:
+- Keep the weights aligned with the mid-chest throughout the movement
+- Maintain shoulder blade retraction and depression
+- Achieve a full stretch at the bottom without excessive depth
+- For the double rest-pause on the last set: reach failure, rest 15 seconds, continue to failure again, rest 15 seconds, final push to failure
+
+**Common Errors**:
+- Setting the bench too steep (shifts focus to shoulders)
+- Losing back contact with the bench
+- Excessive internal rotation at the top (shoulder stress)
+
+### Military Press
+
+**Target Muscles**: Shoulders (primary), Triceps (secondary)
+
+**Execution**:
+1. Start with the barbell at shoulder height, hands slightly wider than shoulders
+2. Feet shoulder-width apart, core braced
+3. Press the bar overhead until arms are fully extended
+4. Lower the bar with control back to shoulder level
+5. For the last set: perform partial reps in the top range after reaching failure
+
+**Key Technical Points**:
+- Keep the core tight and avoid excessive arching of the lower back
+- Press the bar slightly backward to allow it to clear the face
+- Achieve full lockout at the top without forcing the shoulders into impingement
+- Keep the elbows directly under the wrists throughout the movement
+
+**Common Errors**:
+- Leaning back excessively to compensate for limited shoulder mobility
+- Flaring the elbows too far out to the sides
+- Allowing the bar path to drift forward
+
+### Dumbbell Lateral Raise
+
+**Target Muscles**: Middle Deltoids (primary)
+
+**Execution**:
+1. Stand with feet shoulder-width apart, dumbbells at your sides
+2. Keep a slight bend in the elbows
+3. Raise the dumbbells out to the sides until slightly above shoulder level
+4. Control the descent back to the starting position
+5. Superset immediately with Overhead Triceps Extension
+
+**Key Technical Points**:
+- Initiate the movement with the lateral deltoid, not the traps
+- Keep the motion strictly lateral (not front or back)
+- Thumb slightly higher than pinky (slight internal rotation) to better target middle delts
+- A slight forward lean (5-10°) can enhance middle deltoid activation
+
+**Common Errors**:
+- Using momentum and swinging the weights
+- Shrugging the shoulders during the lift
+- Raising the dumbbells too high (above shoulder level)
+
+### Overhead Triceps Extension
+
+**Target Muscles**: Triceps (primary)
+
+**Execution**:
+1. Stand or sit with feet shoulder-width apart
+2. Hold an EZ bar with a narrow grip, arms extended overhead
+3. Lower the bar behind your head by bending at the elbows
+4. Extend the elbows to return to the starting position
+5. Use a 3:1:3 tempo (3s lowering, 1s pause, 3s lifting)
+
+**Key Technical Points**:
+- Keep the upper arms close to the head and stationary
+- Fully extend the triceps at the top of the movement
+- Control the eccentric phase especially with the prescribed tempo
+- Keep the core tight to prevent excessive arching
+
+**Common Errors**:
+- Moving the elbows (they should remain pointing upward)
+- Using too much weight and compromising form
+- Incomplete range of motion
+
+### Triceps Kickbacks
+
+**Target Muscles**: Triceps (primary)
+
+**Execution**:
+1. Bend at the hips to about 45° with a neutral spine, holding dumbbells
+2. Bring the upper arms parallel to the floor and close to the torso
+3. Extend the elbows to push the weights back and up
+4. Hold the contracted position for 1 second
+5. Return to the starting position with control
+
+**Key Technical Points**:
+- Keep the upper arms completely stationary throughout the movement
+- Achieve a complete contraction by fully extending the elbows
+- Hold the peak contraction for 1 second to maximize tension
+- Control the eccentric phase for optimal triceps development
+
+**Common Errors**:
+- Allowing the upper arms to drop
+- Using momentum to swing the weights
+- Not achieving full extension at the top
+
+## Advanced Techniques Used
+
+### Pre-Exhaustion
+
+The workout begins with an isolation movement (Dumbbell Flyes) before moving to compound movements. This pre-exhausts the chest muscles, forcing them to work harder during the compound exercises that follow, potentially creating greater growth stimulus. This technique helps improve the mind-muscle connection and ensures the target muscles reach deeper fatigue.
+
+### Double Rest-Pause
+
+Applied to the last set of Incline Dumbbell Press. After reaching failure, rest for 15 seconds, then continue to failure again. Rest another 15 seconds and perform a final push to failure. This technique extends a set beyond normal failure, recruiting more muscle fibers and creating significant metabolic stress, a key driver of hypertrophy.
+
+### Reduced Rest Periods
+
+The bench press is performed with only 90-second rest periods between sets, rather than the standard 2-3 minutes for heavy compound movements. This increases metabolic stress and growth hormone production, creating a more conducive environment for hypertrophy.
+
+### Partial Reps
+
+Applied to the last set of Military Press. After reaching failure with full-range reps, continue with partial repetitions in the top range of motion. This allows you to continue stimulating the muscle after full-range failure has occurred, increasing total training volume and mechanical tension.
+
+## Workout Progression
+
+- **Week 1-2**: Focus on establishing solid form and mind-muscle connection. Use weights that allow you to reach the higher end of the rep ranges (10 reps for 8-10, 15 reps for 12-15).
+
+- **Week 3-4**: Increase weights by 5-10% on compound movements and 2.5-5% on isolation exercises. Aim for the mid-range of the prescribed rep counts.
+
+- **Week 5-6**: Further increase weights to reach the lower end of the rep ranges, but maintain perfect form. Fully implement all prescribed advanced techniques with proper execution.
+
+## Nutrition Considerations
+
+- **Pre-Workout (1-2 hours before)**:
+  - 25-40g protein (whey isolate or lean animal source)
+  - 40-60g complex carbohydrates (oats, rice, potatoes)
+  - Small amount of healthy fats (5-10g)
+  - Caffeine (200-300mg) if tolerated, 30-45 minutes pre-workout
+
+- **Intra-Workout**:
+  - 5-10g EAAs or 20-30g whey isolate
+  - 20-30g fast-digesting carbs (highly branched cyclic dextrin or dextrose)
+  - Adequate hydration with electrolytes
+
+- **Post-Workout (within 30-45 minutes)**:
+  - 30-40g fast-digesting protein (whey isolate)
+  - 60-80g high-glycemic carbohydrates
+
+## Recovery Notes
+
+- Ensure at least 48 hours before training chest or shoulders again
+- Foam roll the pectorals, anterior deltoids, and triceps
+- Apply contrast therapy (hot/cold) if experiencing significant muscle soreness
+- Focus on quality sleep (7-9 hours) to maximize recovery and growth hormone release
+- Consider selective supplementation: 3-5g creatine daily, 2-3g omega-3s, 1.5-3g L-carnitine L-tartrate
+
+=== ./docs/workouts/week1/day2-pull-a.md ===
+
+
+
+=== ./docs/workouts/week1/day3-legs-a.md ===
+
+
+
+=== ./docs/workouts/week1/day4-push-b.md ===
+
+
+
+=== ./docs/workouts/week1/day5-pull-b.md ===
+
+
+
+=== ./docs/workouts/week1/day6-legs-b.md ===
+
+
+
+=== ./folder-structure.txt ===
+
+/apex
+├── _config.yml                    # Jekyll configuration
+├── _layouts/
+│   └── default.html               # Your custom layout
+├── _includes/                     # Create this directory for reusable components
+│   ├── header.html                # Site header
+│   ├── footer.html                # Site footer
+│   ├── navigation.html            # Navigation menu
+│   └── exercise-card.html         # Reusable exercise card component
+├── assets/
+│   ├── css/
+│   │   └── styles.css             # Move inline styles here
+│   ├── js/
+│   │   └── main.js                # For any JavaScript functionality
+│   └── images/
+│       └── logo.png               # Site logo and other images
+├── index.md                       # Home page
+└── docs/
+    ├── getting-started.md         # Introduction to the program
+    ├── program-overview.md        # Program philosophy and structure
+    ├── exercise-library.md        # Comprehensive exercise guide (renamed)
+    ├── equipment/
+    │   └── index.md               # Equipment guide and substitutions
+    ├── workouts/
+    │   ├── index.md               # Workouts overview
+    │   ├── week1/
+    │   │   ├── index.md           # Week 1 overview
+    │   │   ├── day1-push-a.md     # Push workout A (fixed naming)
+    │   │   ├── day2-pull-a.md     # Pull workout A
+    │   │   ├── day3-legs-a.md     # Legs workout A
+    │   │   ├── day4-push-b.md     # Push workout B
+    │   │   ├── day5-pull-b.md     # Pull workout B
+    │   │   └── day6-legs-b.md     # Legs workout B
+    │   └── week2/                 # For future program variations
+    ├── techniques/
+    │   ├── index.md               # Overview of specialized techniques
+    │   ├── rest-pause.md          # Rest-pause technique details
+    │   ├── mechanical-drop-sets.md # Mechanical drop sets details
+    │   └── tempo-training.md      # Tempo manipulation details
+    ├── nutrition/
+    │   ├── index.md               # Nutrition overview
+    │   ├── caloric-needs.md       # Calculating caloric requirements
+    │   ├── macros.md              # Macronutrient distribution
+    │   ├── meal-timing.md         # Meal timing strategies
+    │   └── supplements.md         # Supplement recommendations
+    ├── recovery/
+    │   ├── index.md               # Recovery overview
+    │   ├── sleep.md               # Sleep optimization
+    │   ├── active-recovery.md     # Active recovery methods
+    │   └── injury-prevention.md   # Injury prevention strategies
+    ├── logs/
+    │   ├── index.md               # Tracking overview
+    │   ├── workout-log.md         # Printable workout log
+    │   ├── nutrition-log.md       # Nutrition tracking template
+    │   └── progress-tracker.md    # Body measurements tracker
+    └── references/
+        ├── index.md               # References overview
+        ├── scientific-studies.md  # Scientific studies supporting the program
+        └── further-reading.md     # Books and resources
+
+=== ./Gemfile ===
+
+source "https://rubygems.org"
+
+# Hello! This is where you manage which Jekyll version is used to run.
+# When you want to use a different version, change it below, save the
+# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+#
+#     bundle exec jekyll serve
+#
+
+# GitHub Pages, remove the "gem "jekyll"" above and
+# uncomment the line below. To upgrade, run `bundle update github-pages`.
+gem "github-pages", group: :jekyll_plugins
+
+# If you have any plugins, put them here!
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-remote-theme"
+end
+
+# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", "~> 1.2"
+  gem "tzinfo-data"
+end
+
+# Performance-booster for watching directories on Windows
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
+# do not have a Java counterpart.
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+# Required for newer Ruby versions
+gem "webrick", "~> 1.7"
+
+=== ./includes/footer.html ===
+
+
+
+=== ./includes/header.html ===
+
+
+
+=== ./includes/navigation.html ===
+
+
+
+=== ./index.md ===
+
+---
+layout: default
+title: "APEX - Advanced Physique Enhancement Program"
+description: "A science-based hypertrophy-optimized 6-day Push/Pull/Legs program designed to maximize muscle growth"
+---
+
+# APEX: Advanced Physique Enhancement Program
+
+Welcome to APEX, a comprehensive hypertrophy-focused training system designed to maximize muscle growth through evidence-based training techniques and principles.
+
+## Program Highlights
+
+- **6-Day Push/Pull/Legs Split**: Optimized training frequency with each muscle group trained twice weekly
+- **Advanced Hypertrophy Techniques**: Mechanical drop sets, rest-pause training, and tempo manipulation
+- **Scientifically-Backed Principles**: Based on the latest research in resistance training and muscle hypertrophy
+- **Complete System**: Includes training, nutrition, recovery, and progress tracking components
+
+## Getting Started
+
+This program is designed for intermediate to advanced lifters looking to maximize hypertrophy (muscle growth). To begin:
+
+1. [**Read the Program Overview**](/apex/docs/program-overview/) to understand the principles and methodology
+2. [**Check Required Equipment**](/apex/docs/equipment/) to ensure you have access to the necessary tools
+3. [**Review the Workout Structure**](/apex/docs/workouts/) to understand the training split
+4. [**Start with Week 1**](/apex/docs/workouts/week1/) and follow the program as prescribed
+
+## Program Components
+
+<div class="grid">
+  <div class="card">
+    <h3>Training Program</h3>
+    <p>A 6-day Push/Pull/Legs routine performed twice weekly to optimize training frequency and volume.</p>
+    <a href="/apex/docs/workouts/" class="btn">View Workouts</a>
+  </div>
+  
+  <div class="card">
+    <h3>Exercise Library</h3>
+    <p>Comprehensive guide to all exercises with proper form, technique, and hypertrophy-specific execution tips.</p>
+    <a href="/apex/docs/exercise-library/" class="btn">Exercise Library</a>
+  </div>
+  
+  <div class="card">
+    <h3>Nutrition Guidelines</h3>
+    <p>Evidence-based nutrition strategies optimized for muscle growth and recovery.</p>
+    <a href="/apex/docs/nutrition/" class="btn">Nutrition Guide</a>
+  </div>
+  
+  <div class="card">
+    <h3>Recovery Protocols</h3>
+    <p>Effective recovery techniques to maximize results and prevent overtraining.</p>
+    <a href="/apex/docs/recovery/" class="btn">Recovery Guide</a>
+  </div>
+</div>
+
+## Program Philosophy
+
+APEX is built on three core pillars:
+
+1. **Scientific Foundation**: All program elements are based on peer-reviewed research and evidence-based practices
+2. **Progressive Overload**: Systematic increases in training stimulus to drive continuous adaptation
+3. **Recovery Optimization**: Strategic recovery protocols to maximize supercompensation and prevent burnout
+
+The program incorporates advanced hypertrophy techniques including mechanical drop sets, rest-pause training, tempo manipulation, and pre-exhaustion methods to maximize muscle fiber recruitment and metabolic stress.
+
+[Begin Your APEX Journey →](/apex/docs/getting-started/){: .btn .btn-secondary}
+
+=== ./_layouts/default.html ===
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  
+  {% if site.github.environment == "github-pages" %}
+  <!-- GitHub Pages doesn't allow custom plugins, so we add analytics here -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  {% endif %}
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="{{ site.baseurl }}/" class="logo">
+        <span>A</span>P<span>E</span>X
+      </a>
+      <nav class="nav">
+        <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+        <a href="{{ site.baseurl }}/docs/getting-started/" {% if page.url contains '/getting-started/' %}class="active"{% endif %}>Getting Started</a>
+        <a href="{{ site.baseurl }}/docs/workouts/" {% if page.url contains '/workouts/' %}class="active"{% endif %}>Workouts</a>
+        <a href="{{ site.baseurl }}/docs/exercise-library/" {% if page.url contains '/exercise-library/' %}class="active"{% endif %}>Exercises</a>
+        <a href="{{ site.baseurl }}/docs/nutrition/" {% if page.url contains '/nutrition/' %}class="active"{% endif %}>Nutrition</a>
+        <a href="{{ site.baseurl }}/docs/recovery/" {% if page.url contains '/recovery/' %}class="active"{% endif %}>Recovery</a>
+        <a href="{{ site.baseurl }}/docs/logs/" {% if page.url contains '/logs/' %}class="active"{% endif %}>Logs</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    {% if page.url != '/' %}
+    <div class="breadcrumbs">
+      <a href="{{ site.baseurl }}/">Home</a>
+      <span class="separator">/</span>
+      {% assign crumbs = page.url | remove: '/index.html' | split: '/' %}
+      {% for crumb in crumbs offset: 1 %}
+        {% if forloop.last %}
+          {{ crumb | replace: '-', ' ' | capitalize }}
+        {% else %}
+          <a href="{{ site.baseurl }}{% for c in crumbs offset: 1 limit: forloop.index %}{{ c | prepend: '/' }}{% endfor %}">{{ crumb | replace: '-', ' ' | capitalize }}</a>
+          <span class="separator">/</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if page.sidebar %}
+    <div class="content-with-sidebar">
+      <main>
+        {{ content }}
+      </main>
+      <aside class="sidebar">
+        <h3>In This Section</h3>
+        <ul>
+          {% for item in page.sidebar_items %}
+          <li>
+            <a href="{{ item.url | relative_url }}" {% if item.url == page.url %}class="active"{% endif %}>{{ item.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        
+        {% if page.category %}
+        <h3>Related</h3>
+        <ul>
+          {% for related in site.pages %}
+            {% if related.category == page.category and related.url != page.url %}
+            <li>
+              <a href="{{ related.url | relative_url }}">{{ related.title }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </aside>
+    </div>
+    {% else %}
+    <main>
+      {{ content }}
+    </main>
+    {% endif %}
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {{ site.time | date: '%Y' }} APEX - Advanced Physique Enhancement Program. Created by <a href="https://github.com/{{ site.github_username }}">{{ site.github_username }}</a>.</p>
+      <p>
+        <a href="{{ site.baseurl }}/">Home</a> |
+        <a href="{{ site.baseurl }}/docs/getting-started/">Getting Started</a> |
+        <a href="{{ site.baseurl }}/docs/workouts/">Workouts</a> |
+        <a href="{{ site.baseurl }}/docs/nutrition/">Nutrition</a> |
+        <a href="https://github.com/{{ site.github_username }}/{{ site.repository }}">GitHub</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+=== ./LICENSE ===
+
+MIT License
+
+Copyright (c) 2025 dth
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+=== ./README.md ===
+
+# APEX: Advanced Physique Enhancement Program
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/xdth/apex/main/assets/images/apex-banner.svg" alt="APEX Training Program" width="800">
+</div>
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/Version-2025.01-brightgreen.svg)](https://github.com/xdth/apex)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+## 🔥 Overview
+
+APEX (Advanced Physique Enhancement Program) is a scientifically-designed, hypertrophy-focused training program implementing cutting-edge techniques for maximum muscle growth. This program utilizes a 6-day Push/Pull/Legs split with carefully calibrated volume, intensity, and advanced training methodologies.
+
+### Program Highlights
+
+- **Training Split**: Push/Pull/Legs performed twice weekly
+- **Frequency**: Each muscle group trained 2x per week with varied stimuli
+- **Rest Days**: 1 day (flexible placement)
+- **Focus**: Maximum hypertrophy with advanced techniques
+- **Available Equipment**: Olympic barbell, shorter barbell, adjustable dumbbells, EZ bar, incline bench
+
+## 📋 Program Structure
+
+APEX follows a 6-day Push/Pull/Legs structure:
+
+| Day | Focus | Primary Muscle Groups |
+|-----|-------|----------------------|
+| 1 | Push A | Chest, Shoulders, Triceps |
+| 2 | Pull A | Back, Biceps |
+| 3 | Legs A | Quads, Hamstrings, Glutes, Calves |
+| 4 | Push B | Chest, Shoulders, Triceps (different angles/exercises) |
+| 5 | Pull B | Back, Biceps (different angles/exercises) |
+| 6 | Legs B | Quads, Hamstrings, Glutes, Calves (different angles/exercises) |
+| 7 | Rest | Active recovery, mobility work |
+
+### Advanced Techniques
+
+The program implements research-backed hypertrophy techniques:
+
+- **Mechanical Drop Sets**: Continue with an easier variation after reaching failure
+- **Double Rest-Pause**: Rest briefly after failure, continue to second failure, rest again, final push
+- **Tempo Manipulation**: Strategic control of eccentric, isometric, and concentric phases
+- **Partial Repetitions**: Additional partial range of motion reps after reaching failure
+- **Pre-Exhaustion**: Isolation exercise immediately before a compound movement for target muscle
+
+## 📚 Documentation
+
+The complete program documentation covers:
+
+- [Exercise Library](docs/exercise-library.md): Detailed breakdown of all exercises
+- [Nutrition Guide](docs/nutrition-guide.md): Nutritional strategies to maximize muscle growth
+- [Recovery Protocols](docs/recovery-protocols.md): Optimizing recovery for consistent progress
+- [Workout Logs](docs/logs/README.md): Printable workout tracking sheets
+- [Program FAQ](docs/faq.md): Common questions and troubleshooting
+
+## 🚀 Getting Started
+
+1. Review the [Program Overview](docs/program-overview.md) to understand the training philosophy
+2. Assess your [Equipment Requirements](docs/equipment-guide.md)
+3. Calculate your [Nutritional Needs](docs/nutrition-calculator.md)
+4. Begin with [Week 1 Workouts](docs/workouts/week1/README.md)
+5. Track your progress using the [provided templates](docs/tracking/templates.md)
+
+## 📊 Progress Tracking
+
+The repository includes comprehensive tracking tools:
+
+- Exercise performance metrics
+- Body composition measurements
+- Nutrition tracking templates
+- Autoregulation protocols
+
+## 📝 Contributing
+
+Contributions to APEX are welcome! Please see our [Contribution Guidelines](CONTRIBUTING.md) for details on:
+
+- Suggesting exercise alternatives
+- Reporting issues with workout plans
+- Enhancing documentation
+- Sharing success stories and feedback
+
+## 📄 License
+
+This program is released under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+APEX was created by dth with Claude 3.7. Before using this program, consult a certified strength and conditioning specialist with expertise in hypertrophy-focused training methodologies and a doctor.
+
+## 🙏 Acknowledgements
+
+- Scientific research by [relevant researchers/institutions]
+- Feedback from test groups implementing earlier versions
+- Equipment recommendations based on [relevant standards/certifications]

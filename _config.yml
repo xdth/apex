@@ -20,6 +20,11 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Styling
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # Collections
 collections:
   workouts:
